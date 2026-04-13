@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "totalRequests": 8,
+    "averageResponseTime": 751.3062500000001,
+    "errorRate": 37.5,
+    "totalSlowRequests": 3,
+    "statusCounts": {
+      "5xx": 3,
+      "2xx": 5
+    }
+  },
+  "endpointDetails": {
+    "GET http://localhost:3000/api/dummy/error": {
+      "method": "GET",
+      "endpoint": "http://localhost:3000/api/dummy/error",
+      "totalRequests": 3,
+      "averageResponseTime": 1.39,
+      "slowRequests": 0,
+      "errors": 3
+    },
+    "GET https://google.com": {
+      "method": "GET",
+      "endpoint": "https://google.com",
+      "totalRequests": 3,
+      "averageResponseTime": 1999.4733333333334,
+      "slowRequests": 3,
+      "errors": 0
+    },
+    "GET http://localhost:3000/api/dummy/success": {
+      "method": "GET",
+      "endpoint": "http://localhost:3000/api/dummy/success",
+      "totalRequests": 2,
+      "averageResponseTime": 3.9299999999999997,
+      "slowRequests": 0,
+      "errors": 0
+    }
+  }
+}

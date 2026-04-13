@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-04-01T13:04:44.752Z",
+    "method": "GET",
+    "endpoint": "/api/users",
+    "status": 200,
+    "responseTime": 9.62
+  },
+  {
+    "timestamp": "2026-04-01T13:04:45.730Z",
+    "method": "GET",
+    "endpoint": "/api/slow",
+    "status": 200,
+    "responseTime": 810.88
+  },
+  {
+    "timestamp": "2026-04-01T13:04:45.909Z",
+    "method": "POST",
+    "endpoint": "/api/users",
+    "status": 201,
+    "responseTime": 154.69
+  },
+  {
+    "timestamp": "2026-04-01T13:04:45.943Z",
+    "method": "GET",
+    "endpoint": "/api/error",
+    "status": 500,
+    "responseTime": 1.06
+  },
+  {
+    "timestamp": "2026-04-01T13:06:45.762Z",
+    "method": "GET",
+    "endpoint": "/favicon.ico",
+    "status": 404,
+    "responseTime": 2.73
+  }
+]

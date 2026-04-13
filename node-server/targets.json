@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "addedAt": "2026-04-01T13:20:00.503Z"
+  },
+  {
+    "id": 2,
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "addedAt": "2026-04-01T13:20:00.506Z"
+  },
+  {
+    "id": 3,
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "addedAt": "2026-04-01T13:20:00.506Z"
+  },
+  {
+    "id": 1775049664186,
+    "url": "https://google.com",
+    "method": "GET",
+    "addedAt": "2026-04-01T13:21:04.186Z"
+  },
+  {
+    "id": 1775049956004,
+    "url": "https://google.com",
+    "method": "POST",
+    "addedAt": "2026-04-01T13:25:56.004Z"
+  },
+  {
+    "id": 1775061668219,
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "addedAt": "2026-04-01T16:41:08.219Z"
+  },
+  {
+    "id": 1775061702407,
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "addedAt": "2026-04-01T16:41:42.407Z"
+  }
+]

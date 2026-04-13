@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active API Performance Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8; --border: #334155; --primary: #38bdf8; --success: #4ade80; --danger: #f87171; --warning: #fbbf24; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem; }
+        h1 { text-align: center; color: var(--primary); font-weight: 600; margin-bottom: 2rem; }
+        
+        .flex-between { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        
+        .card { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        
+        .stat-card { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
+        .stat-card h2 { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat-value { font-size: 2.5rem; font-weight: bold; color: var(--text); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--border); }
+        th { color: var(--muted); font-weight: 500; }
+        tr:hover { background: #233044; }
+        
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .badge-success { background: rgba(74, 222, 128, 0.2); color: var(--success); border: 1px solid var(--success); }
+        .badge-danger { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+        .badge-warning { background: rgba(251, 191, 36, 0.2); color: var(--warning); border: 1px solid var(--warning); }
+        
+        .btn { background: var(--primary); color: var(--bg); border: none; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+        .btn:hover { filter: brightness(1.1); }
+        .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+        .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
+        .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 6px 12px; font-size: 0.85rem; }
+        .btn-danger:hover { background: rgba(248, 113, 113, 0.1); }
+
+        .form-group { display: flex; gap: 1rem; align-items: flex-end; }
+        .input-group { flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+        label { font-size: 0.9rem; color: var(--muted); }
+        input, select { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.75rem; border-radius: 8px; font-size: 1rem; }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        
+        .chart-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        @media(max-width: 768px) { .chart-row { grid-template-columns: 1fr; } }
+        canvas { max-height: 300px; width: 100% !important; }
+
+        .color-success { color: var(--success); }
+        .color-danger { color: var(--danger); }
+        .color-warning { color: var(--warning); }
+    </style>
+</head>
+<body>
+    <h1>🚀 Active API Performance Monitor</h1>
+    
+    <div class="card">
+        <h2>➕ Add API to Monitor</h2>
+        <form id="addApiForm" class="form-group" style="margin-top: 1rem;">
+            <div class="input-group" style="flex: 0 0 150px;">
+                <label>Method</label>
+                <select id="apiMethod">
+                    <option>GET</option>
+                    <option>POST</option>
+                    <option>PUT</option>
+                    <option>DELETE</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Endpoint URL</label>
+                <input type="url" id="apiUrl" placeholder="https://api.example.com/health" required>
+            </div>
+            <button type="submit" class="btn">Register Target</button>
+        </form>
+    </div>
+
+    <div class="flex-between">
+        <h2 style="margin: 0;">System Overview</h2>
+        <button class="btn btn-outline" onclick="fetchData()">🔄 Refresh Data</button>
+    </div>
+
+    <div class="grid">
+        <div class="stat-card">
+            <h2>Monitored APIs</h2>
+            <div class="stat-value" id="total-apis">0</div>
+        </div>
+        <div class="stat-card">
+            <h2>Global Uptime</h2>
+            <div class="stat-value" id="global-uptime">0%</div>
+        </div>
+        <div class="stat-card">
+            <h2>Avg Response Time</h2>
+            <div class="stat-value" id="global-latency">0 ms</div>
+        </div>
+        <div class="stat-card">
+            <h2>Total Pings</h2>
+            <div class="stat-value" id="total-pings">0</div>
+        </div>
+    </div>
+
+    <div class="chart-row">
+        <div class="card">
+            <h2>Latency vs Uptime</h2>
+            <canvas id="latencyChart"></canvas>
+        </div>
+        <div class="card">
+            <h2>Overall Health</h2>
+            <canvas id="healthChart"></canvas>
+        </div>
+    </div>
+
+    <div class="card" style="overflow-x: auto;">
+        <h2>Monitored Targets</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Target API</th>
+                    <th>Status</th>
+                    <th>Uptime</th>
+                    <th>Avg Latency</th>
+                    <th>Slow Pings</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="apiTableBody">
+                <!-- Rows -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let latencyChart, healthChart;
+
+        document.getElementById('addApiForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerHTML = 'Adding...';
+            
+            const url = document.getElementById('apiUrl').value;
+            const method = document.getElementById('apiMethod').value;
+            
+            try {
+                const res = await fetch('/api/targets', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url, method })
+                });
+                if(res.ok) {
+                    document.getElementById('apiUrl').value = '';
+                    fetchData();
+                } else {
+                    const data = await res.json();
+                    alert(data.error || 'Failed to add');
+                }
+            } catch(e) {
+                alert('Network error');
+            }
+            btn.innerHTML = 'Register Target';
+        });
+
+        async function removeTarget(id) {
+            if(!confirm("Stop monitoring this API?")) return;
+            await fetch('/api/targets/' + id, { method: 'DELETE' });
+            fetchData();
+        }
+
+        async function fetchData() {
+            try {
+                const [targetsRes, reportRes] = await Promise.all([
+                    fetch('/api/targets').catch(()=>null),
+                    fetch('/report.json').catch(()=>null)
+                ]);
+
+                const targets = targetsRes && targetsRes.ok ? await targetsRes.json() : [];
+                let report = null;
+                if(reportRes && reportRes.ok) {
+                    report = await reportRes.json();
+                }
+
+                updateDashboard(targets, report);
+            } catch(e) { console.error(e); }
+        }
+
+        function updateDashboard(targets, report) {
+            document.getElementById('total-apis').innerText = targets.length;
+            
+            const tbody = document.getElementById('apiTableBody');
+            tbody.innerHTML = '';
+
+            let globalPings = 0;
+            let globalUptimeSum = 0;
+            let globalLatencySum = 0;
+            let APIsWithData = 0;
+            let healthyCount = 0;
+            let degradedCount = 0;
+            let downCount = 0;
+
+            const labels = [];
+            const latencies = [];
+            const uptimes = [];
+
+            targets.forEach(t => {
+                const key = `${t.method} ${t.url}`;
+                const stats = report && report.endpointDetails ? report.endpointDetails[key] : null;
+
+                let uptime = 0;
+                let latency = 0;
+                let statusHtml = '<span class="badge badge-warning">No Data</span>';
+                let slowPings = 0;
+
+                if (stats && stats.totalRequests > 0) {
+                    uptime = ((stats.totalRequests - stats.errors) / stats.totalRequests) * 100;
+                    latency = stats.averageResponseTime;
+                    slowPings = stats.slowRequests;
+                    
+                    globalPings += stats.totalRequests;
+                    globalUptimeSum += uptime;
+                    globalLatencySum += latency;
+                    APIsWithData++;
+
+                    if(uptime >= 99) {
+                        statusHtml = '<span class="badge badge-success">Healthy</span>';
+                        healthyCount++;
+                    } else if(uptime >= 90) {
+                        statusHtml = '<span class="badge badge-warning">Degraded</span>';
+                        degradedCount++;
+                    } else {
+                        statusHtml = '<span class="badge badge-danger">Down</span>';
+                        downCount++;
+                    }
+                    
+                    labels.push(t.url.replace(/^https?:\/\//, '').substring(0, 30));
+                    latencies.push(latency.toFixed(0));
+                    uptimes.push(uptime.toFixed(1));
+                }
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>
+                        <strong style="color:var(--primary)">${t.method}</strong> 
+                        ${t.url}
+                    </td>
+                    <td>${statusHtml}</td>
+                    <td class="${uptime < 99 ? (uptime < 90 ? 'color-danger' : 'color-warning') : 'color-success'}">
+                        ${stats ? uptime.toFixed(2) + '%' : '-'}
+                    </td>
+                    <td>${stats ? Math.round(latency) + ' ms' : '-'}</td>
+                    <td>${slowPings}</td>
+                    <td><button class="btn-danger" onclick="removeTarget(${t.id})">Remove</button></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            if (APIsWithData > 0) {
+                document.getElementById('global-uptime').innerText = (globalUptimeSum / APIsWithData).toFixed(2) + '%';
+                document.getElementById('global-latency').innerText = Math.round(globalLatencySum / APIsWithData) + ' ms';
+                document.getElementById('global-uptime').className = 'stat-value ' + ((globalUptimeSum / APIsWithData) < 95 ? 'color-danger' : 'color-success');
+            } else {
+                document.getElementById('global-uptime').innerText = '0%';
+                document.getElementById('global-latency').innerText = '0 ms';
+            }
+            document.getElementById('total-pings').innerText = globalPings;
+
+            updateCharts(labels, latencies, uptimes, healthyCount, degradedCount, downCount);
+        }
+
+        function updateCharts(labels, latencies, uptimes, h, d, n) {
+            // Mixed Chart
+            const ctx1 = document.getElementById('latencyChart').getContext('2d');
+            if(latencyChart) latencyChart.destroy();
+            latencyChart = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [
+                        { label: 'Latency (ms)', data: latencies, backgroundColor: '#38bdf8', yAxisID: 'y' },
+                        { label: 'Uptime (%)', data: uptimes, type: 'line', borderColor: '#4ade80', yAxisID: 'y1' }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        y: { type: 'linear', position: 'left', grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+                        y1: { type: 'linear', position: 'right', grid: { display: false }, min: 0, max: 100, ticks: { color: '#4ade80' } },
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
+                    },
+                    plugins: { legend: { labels: { color: '#e2e8f0' } } }
+                }
+            });
+
+            // Health Chart
+            const ctx2 = document.getElementById('healthChart').getContext('2d');
+            if(healthChart) healthChart.destroy();
+            healthChart = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Healthy', 'Degraded', 'Down'],
+                    datasets: [{ data: [h, d, n], backgroundColor: ['#4ade80', '#fbbf24', '#f87171'], borderWidth: 0 }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#e2e8f0' } } } }
+            });
+        }
+
+        // Init
+        fetchData();
+        // Auto refresh every 10s
+        setInterval(fetchData, 10000);
+    </script>
+</body>
+</html>
