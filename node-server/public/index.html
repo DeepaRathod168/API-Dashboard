@@ -1,310 +1,2292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active API Performance Monitor</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8; --border: #334155; --primary: #38bdf8; --success: #4ade80; --danger: #f87171; --warning: #fbbf24; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem; }
-        h1 { text-align: center; color: var(--primary); font-weight: 600; margin-bottom: 2rem; }
-        
-        .flex-between { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-        
-        .card { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 1.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-        
-        .stat-card { background: var(--card); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
-        .stat-card h2 { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
-        .stat-value { font-size: 2.5rem; font-weight: bold; color: var(--text); }
-        
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--border); }
-        th { color: var(--muted); font-weight: 500; }
-        tr:hover { background: #233044; }
-        
-        .badge { padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
-        .badge-success { background: rgba(74, 222, 128, 0.2); color: var(--success); border: 1px solid var(--success); }
-        .badge-danger { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid var(--danger); }
-        .badge-warning { background: rgba(251, 191, 36, 0.2); color: var(--warning); border: 1px solid var(--warning); }
-        
-        .btn { background: var(--primary); color: var(--bg); border: none; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-        .btn:hover { filter: brightness(1.1); }
-        .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); }
-        .btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
-        .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 6px 12px; font-size: 0.85rem; }
-        .btn-danger:hover { background: rgba(248, 113, 113, 0.1); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Performance Monitor — Dashboard</title>
+  <meta name="description"
+    content="Real-time API monitoring dashboard tracking uptime, latency, errors and performance trends.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    /* ══════════════════════════════════════════ DESIGN TOKENS */
+    :root {
+      --bg: #080d1a;
+      --surface: #0d1526;
+      --card: #111b30;
+      --card2: #162040;
+      --border: #1e2d4d;
+      --border2: #243660;
+      --text: #e8f0ff;
+      --muted: #6b82b0;
+      --muted2: #4a5f8a;
 
-        .form-group { display: flex; gap: 1rem; align-items: flex-end; }
-        .input-group { flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
-        label { font-size: 0.9rem; color: var(--muted); }
-        input, select { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 0.75rem; border-radius: 8px; font-size: 1rem; }
-        input:focus, select:focus { outline: none; border-color: var(--primary); }
-        
-        .chart-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-        @media(max-width: 768px) { .chart-row { grid-template-columns: 1fr; } }
-        canvas { max-height: 300px; width: 100% !important; }
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, .25);
+      --success: #22c55e;
+      --success-bg: rgba(34, 197, 94, .12);
+      --danger: #ef4444;
+      --danger-bg: rgba(239, 68, 68, .12);
+      --warning: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, .12);
+      --purple: #8b5cf6;
 
-        .color-success { color: var(--success); }
-        .color-danger { color: var(--danger); }
-        .color-warning { color: var(--warning); }
-    </style>
+      --sidebar-w: 240px;
+      --header-h: 64px;
+      --radius: 12px;
+      --radius-lg: 18px;
+
+      --transition: all .2s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* ══════════════════════════════════════════ RESET */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ══════════════════════════════════════════ LAYOUT */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ══════════════════════════════════════════ SIDEBAR */
+    .sidebar {
+      width: var(--sidebar-w);
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      transition: transform .3s;
+    }
+
+    .sidebar-logo {
+      padding: 0 1.5rem;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .logo-text {
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+    .sidebar-nav {
+      flex: 1;
+      padding: 1.5rem 1rem;
+      overflow-y: auto;
+    }
+
+    .nav-section-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted2);
+      padding: 0 .5rem;
+      margin-bottom: .5rem;
+      margin-top: 1.25rem;
+    }
+
+    .nav-section-label:first-child {
+      margin-top: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .65rem .75rem;
+      border-radius: 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-bottom: .25rem;
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover {
+      background: var(--card);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .nav-link.active {
+      background: rgba(59, 130, 246, .15);
+      color: var(--primary);
+      border-color: rgba(59, 130, 246, .3);
+    }
+
+    .nav-link .nav-icon {
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .nav-badge {
+      margin-left: auto;
+      background: var(--danger);
+      color: #fff;
+      border-radius: 20px;
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 7px;
+    }
+
+    .sidebar-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, .4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+      }
+    }
+
+    /* ══════════════════════════════════════════ MAIN */
+    .main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .topbar {
+      height: var(--header-h);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .page-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    .refresh-btn {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .45rem 1rem;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: .8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .refresh-btn:hover {
+      background: var(--card);
+      border-color: var(--border2);
+    }
+
+    .refresh-btn.spinning .spin-icon {
+      animation: spin .6s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .35rem .85rem;
+      background: var(--success-bg);
+      border: 1px solid rgba(34, 197, 94, .25);
+      border-radius: 20px;
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--success);
+    }
+
+    .content {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    /* ══════════════════════════════════════════ SCREENS */
+    .screen {
+      display: none;
+      animation: fadeIn .25s ease;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ══════════════════════════════════════════ SECTION HEADERS */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .section-sub {
+      font-size: .8rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+
+    /* ══════════════════════════════════════════ CARDS */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      border-color: var(--border2);
+    }
+
+    .card-title {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: .75rem;
+    }
+
+    /* ══════════════════════════════════════════ STAT CARDS */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .stat-card.blue::before {
+      background: var(--primary);
+    }
+
+    .stat-card.green::before {
+      background: var(--success);
+    }
+
+    .stat-card.red::before {
+      background: var(--danger);
+    }
+
+    .stat-card.orange::before {
+      background: var(--warning);
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .stat-label {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .stat-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .stat-icon.blue {
+      background: rgba(59, 130, 246, .15);
+    }
+
+    .stat-icon.green {
+      background: var(--success-bg);
+    }
+
+    .stat-icon.red {
+      background: var(--danger-bg);
+    }
+
+    .stat-icon.orange {
+      background: var(--warning-bg);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      margin-bottom: .25rem;
+    }
+
+    .stat-value.blue {
+      color: var(--primary);
+    }
+
+    .stat-value.green {
+      color: var(--success);
+    }
+
+    .stat-value.red {
+      color: var(--danger);
+    }
+
+    .stat-value.orange {
+      color: var(--warning);
+    }
+
+    .stat-trend {
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    /* ══════════════════════════════════════════ CHARTS GRID */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 260px;
+    }
+
+    /* ══════════════════════════════════════════ TABLES */
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .875rem;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: .75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: .9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr {
+      transition: background .15s;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, .03);
+    }
+
+    /* ══════════════════════════════════════════ BADGES */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: .72rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .badge-success {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid rgba(34, 197, 94, .25);
+    }
+
+    .badge-danger {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, .25);
+    }
+
+    .badge-warning {
+      background: var(--warning-bg);
+      color: var(--warning);
+      border: 1px solid rgba(245, 158, 11, .25);
+    }
+
+    .badge-info {
+      background: rgba(59, 130, 246, .12);
+      color: var(--primary);
+      border: 1px solid rgba(59, 130, 246, .25);
+    }
+
+    .badge-neutral {
+      background: rgba(107, 130, 176, .1);
+      color: var(--muted);
+      border: 1px solid rgba(107, 130, 176, .2);
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    /* ══════════════════════════════════════════ BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .6rem 1.25rem;
+      border-radius: 10px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      background: var(--card);
+      color: var(--text);
+    }
+
+    .btn-danger-ghost {
+      background: transparent;
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, .3);
+      padding: .4rem .85rem;
+      font-size: .78rem;
+    }
+
+    .btn-danger-ghost:hover {
+      background: var(--danger-bg);
+    }
+
+    /* ══════════════════════════════════════════ FORM ELEMENTS */
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+
+    .form-group.grow {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    label {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    input,
+    select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: .65rem .9rem;
+      border-radius: 10px;
+      font-size: .875rem;
+      font-family: inherit;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    input::placeholder {
+      color: var(--muted2);
+    }
+
+    /* ══════════════════════════════════════════ SEARCH BAR */
+    .search-field {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-field input {
+      padding-left: 2.4rem;
+      min-width: 240px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: .8rem;
+      color: var(--muted);
+      font-size: .9rem;
+      pointer-events: none;
+    }
+
+    /* ══════════════════════════════════════════ ACTIVITY FEED */
+    .activity-list {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .activity-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: .75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: .82rem;
+      transition: var(--transition);
+    }
+
+    .activity-item:hover {
+      border-color: var(--border2);
+    }
+
+    .activity-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .activity-dot.success {
+      background: var(--success);
+    }
+
+    .activity-dot.danger {
+      background: var(--danger);
+    }
+
+    .activity-url {
+      flex: 1;
+      color: var(--text);
+      font-family: 'Courier New', monospace;
+      font-size: .8rem;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .activity-meta {
+      color: var(--muted);
+      font-size: .76rem;
+      white-space: nowrap;
+    }
+
+    .activity-status {
+      font-weight: 700;
+      font-size: .8rem;
+    }
+
+    .activity-status.ok {
+      color: var(--success);
+    }
+
+    .activity-status.err {
+      color: var(--danger);
+    }
+
+    /* ══════════════════════════════════════════ METHOD PILL */
+    .method-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: .7rem;
+      font-weight: 700;
+      font-family: 'Courier New', monospace;
+      letter-spacing: .03em;
+    }
+
+    .method-pill.GET {
+      background: rgba(34, 197, 94, .15);
+      color: var(--success);
+    }
+
+    .method-pill.POST {
+      background: rgba(59, 130, 246, .15);
+      color: var(--primary);
+    }
+
+    .method-pill.PUT {
+      background: rgba(245, 158, 11, .15);
+      color: var(--warning);
+    }
+
+    .method-pill.DELETE {
+      background: rgba(239, 68, 68, .15);
+      color: var(--danger);
+    }
+
+    .method-pill.PATCH {
+      background: rgba(139, 92, 246, .15);
+      color: var(--purple);
+    }
+
+    /* ══════════════════════════════════════════ PROGRESS BAR */
+    .progress-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 20px;
+      transition: width .6s;
+    }
+
+    .progress-fill.green {
+      background: linear-gradient(90deg, var(--success), #86efac);
+    }
+
+    .progress-fill.orange {
+      background: linear-gradient(90deg, var(--warning), #fcd34d);
+    }
+
+    .progress-fill.red {
+      background: linear-gradient(90deg, var(--danger), #fca5a5);
+    }
+
+    /* ══════════════════════════════════════════ UPTIME METER */
+    .uptime-grid {
+      display: flex;
+      gap: 3px;
+    }
+
+    .uptime-block {
+      height: 24px;
+      flex: 1;
+      border-radius: 3px;
+      min-width: 4px;
+    }
+
+    /* ══════════════════════════════════════════ EMPTY / LOADING */
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+    }
+
+    .empty-state .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: .4;
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, var(--card) 25%, var(--card2) 50%, var(--card) 75%);
+      background-size: 200%;
+      border-radius: 6px;
+      animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+      to {
+        background-position: -200% 0;
+      }
+    }
+
+    /* ══════════════════════════════════════════ TOAST */
+    .toast-container {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .toast {
+      padding: .75rem 1.25rem;
+      border-radius: 10px;
+      font-size: .85rem;
+      font-weight: 500;
+      border: 1px solid;
+      color: #fff;
+      animation: slideIn .25s ease, fadeOut .3s ease 2.7s forwards;
+      max-width: 320px;
+    }
+
+    .toast.success {
+      background: rgba(21, 128, 61, .9);
+      border-color: rgba(34, 197, 94, .4);
+    }
+
+    .toast.error {
+      background: rgba(153, 27, 27, .9);
+      border-color: rgba(239, 68, 68, .4);
+    }
+
+    .toast.info {
+      background: rgba(30, 58, 138, .9);
+      border-color: rgba(59, 130, 246, .4);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+
+    /* ══════════════════════════════════════════ DETAIL PANEL */
+    .detail-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .detail-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+
+    .detail-label {
+      font-size: .7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    .detail-value {
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    .json-viewer {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      font-size: .8rem;
+      color: #a8d8ea;
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 240px;
+      overflow-y: auto;
+    }
+
+    /* ══════════════════════════════════════════ LOGIN SCREEN */
+    .auth-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--bg);
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+    }
+
+    .auth-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, .5);
+    }
+
+    .auth-logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .auth-logo .logo-icon-lg {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 8px 24px var(--primary-glow);
+      margin-bottom: 1rem;
+    }
+
+    .auth-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: .35rem;
+    }
+
+    .auth-sub {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .auth-form input {
+      width: 100%;
+    }
+
+    .auth-error {
+      background: var(--danger-bg);
+      border: 1px solid rgba(239, 68, 68, .3);
+      color: var(--danger);
+      padding: .6rem .9rem;
+      border-radius: 8px;
+      font-size: .8rem;
+      display: none;
+    }
+
+    .auth-error.visible {
+      display: block;
+    }
+
+    .auth-toggle {
+      text-align: center;
+      margin-top: 1.25rem;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .auth-toggle a {
+      color: var(--primary);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .auth-toggle a:hover {
+      text-decoration: underline;
+    }
+
+    /* ══════════════════════════════════════════ ANALYTICS SCREEN */
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ══════════════════════════════════════════ MOBILE MENU TOGGLE */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.4rem;
+      cursor: pointer;
+      margin-right: .5rem;
+    }
+
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .6);
+      z-index: 90;
+    }
+
+    /* ══════════════════════════════════════════ SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border2);
+      border-radius: 20px;
+    }
+
+    /* ══════════════════════════════════════════ RESPONSIVE */
+    @media (max-width: 1100px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .analytics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: none;
+      }
+
+      .sidebar-overlay.open {
+        display: block;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .content {
+        padding: 1rem;
+      }
+
+      .topbar {
+        padding: 0 1rem;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+
+      .search-field input {
+        min-width: unset;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>🚀 Active API Performance Monitor</h1>
-    
-    <div class="card">
-        <h2>➕ Add API to Monitor</h2>
-        <form id="addApiForm" class="form-group" style="margin-top: 1rem;">
-            <div class="input-group" style="flex: 0 0 150px;">
-                <label>Method</label>
+
+  <!-- ── AUTH SCREEN ─────────────────────────────────────────────────────── -->
+  <div class="auth-wrapper" id="authWrapper">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="logo-icon-lg">📡</div>
+        <div class="auth-title">API Monitor</div>
+        <div class="auth-sub" id="authSubtitle">Sign in to your dashboard</div>
+      </div>
+      <div id="authError" class="auth-error"></div>
+      <form id="authForm" class="auth-form">
+        <div id="authNameGroup" class="form-group" style="display:none">
+          <label for="authName">Full Name</label>
+          <input id="authName" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="authEmail">Email</label>
+          <input id="authEmail" type="email" placeholder="admin@example.com" value="admin@monitor.dev">
+        </div>
+        <div class="form-group">
+          <label for="authPassword">Password</label>
+          <input id="authPassword" type="password" placeholder="••••••••" value="admin123">
+        </div>
+        <button type="submit" class="btn btn-primary" id="authBtn"
+          style="width:100%;justify-content:center;padding:.8rem">Sign In</button>
+      </form>
+      <div class="auth-toggle">
+        <span id="authToggleText">Don't have an account?</span>
+        <a id="authToggleLink">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN LAYOUT ────────────────────────────────────────────────────── -->
+  <div class="layout" id="appLayout" style="display:none">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-icon">📡</div>
+        <div class="logo-text">API <span>Monitor</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Overview</div>
+        <a class="nav-link active" data-screen="dashboard" id="nav-dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a class="nav-link" data-screen="apis" id="nav-apis">
+          <span class="nav-icon">🔗</span> APIs
+          <span class="nav-badge" id="failBadge" style="display:none">0</span>
+        </a>
+
+        <div class="nav-section-label">Insights</div>
+        <a class="nav-link" data-screen="analytics" id="nav-analytics">
+          <span class="nav-icon">📈</span> Analytics
+        </a>
+        <a class="nav-link" data-screen="logs" id="nav-logs">
+          <span class="nav-icon">📋</span> Activity Logs
+        </a>
+
+        <div class="nav-section-label">Account</div>
+        <a class="nav-link" data-screen="settings" id="nav-settings">
+          <span class="nav-icon">⚙️</span> Settings
+        </a>
+        <a class="nav-link" id="logoutBtn">
+          <span class="nav-icon">🚪</span> Sign Out
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-indicator">
+          <div class="pulse"></div>
+          <span>Live monitoring active</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-toggle" id="menuToggle">☰</button>
+          <div class="page-title" id="pageTitle">Dashboard</div>
+        </div>
+        <div class="topbar-right">
+          <div class="live-badge">
+            <div class="pulse" style="width:6px;height:6px;flex-shrink:0"></div>
+            Live
+          </div>
+          <button class="refresh-btn" id="globalRefreshBtn">
+            <span class="spin-icon">🔄</span> Refresh
+          </button>
+          <div
+            style="font-size:.78rem;color:var(--muted);padding:.35rem .75rem;background:var(--card2);border:1px solid var(--border);border-radius:8px;"
+            id="userDisplay">admin</div>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <!-- ════════ SCREEN: DASHBOARD ════════ -->
+        <section class="screen active" id="screen-dashboard">
+          <div class="section-header">
+            <div>
+              <div class="section-title">System Overview</div>
+              <div class="section-sub">Real-time health across all monitored endpoints</div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card blue">
+              <div class="stat-header">
+                <div class="stat-label">Monitored APIs</div>
+                <div class="stat-icon blue">🔗</div>
+              </div>
+              <div class="stat-value blue" id="s-total-apis">—</div>
+              <div class="stat-trend" id="s-total-apis-sub">Loading...</div>
+            </div>
+            <div class="stat-card green">
+              <div class="stat-header">
+                <div class="stat-label">Global Uptime</div>
+                <div class="stat-icon green">✅</div>
+              </div>
+              <div class="stat-value green" id="s-uptime">—</div>
+              <div class="stat-trend" id="s-uptime-sub">Loading...</div>
+            </div>
+            <div class="stat-card orange">
+              <div class="stat-header">
+                <div class="stat-label">Avg Response</div>
+                <div class="stat-icon orange">⚡</div>
+              </div>
+              <div class="stat-value orange" id="s-latency">—</div>
+              <div class="stat-trend" id="s-latency-sub">Loading...</div>
+            </div>
+            <div class="stat-card red">
+              <div class="stat-header">
+                <div class="stat-label">Error Rate</div>
+                <div class="stat-icon red">⚠️</div>
+              </div>
+              <div class="stat-value red" id="s-error-rate">—</div>
+              <div class="stat-trend" id="s-error-rate-sub">Loading...</div>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="card">
+              <div class="card-title">Latency & Uptime (per endpoint)</div>
+              <div class="chart-container"><canvas id="chart-latency-uptime"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-title">Health Distribution</div>
+              <div class="chart-container"><canvas id="chart-health-donut"></canvas></div>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 320px;gap:1.25rem;">
+            <div class="card">
+              <div class="card-title" style="margin-bottom:1rem">Endpoint Status</div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Endpoint</th>
+                      <th>Status</th>
+                      <th>Uptime</th>
+                      <th>Avg Latency</th>
+                      <th>Slow Pings</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dash-api-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title" style="margin-bottom:1rem">Recent Activity</div>
+              <div class="activity-list" id="dash-activity-list" style="max-height:280px;overflow-y:auto"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ════════ SCREEN: API LIST ════════ -->
+        <section class="screen" id="screen-apis">
+          <div class="section-header">
+            <div>
+              <div class="section-title">API Targets</div>
+              <div class="section-sub">Manage monitored endpoints</div>
+            </div>
+          </div>
+
+          <!-- Add API Card -->
+          <div class="card" style="margin-bottom:1.5rem">
+            <div class="card-title" style="margin-bottom:1rem">➕ Register New Target</div>
+            <form id="addApiForm" class="form-row">
+              <div class="form-group" style="flex:0 0 130px">
+                <label for="apiMethod">Method</label>
                 <select id="apiMethod">
-                    <option>GET</option>
-                    <option>POST</option>
-                    <option>PUT</option>
-                    <option>DELETE</option>
+                  <option>GET</option>
+                  <option>POST</option>
+                  <option>PUT</option>
+                  <option>PATCH</option>
+                  <option>DELETE</option>
                 </select>
+              </div>
+              <div class="form-group grow">
+                <label for="apiUrl">Endpoint URL</label>
+                <input id="apiUrl" type="url" placeholder="https://api.example.com/health" required>
+              </div>
+              <div class="form-group grow">
+                <label for="apiName">Display Name (optional)</label>
+                <input id="apiName" placeholder="My Production API">
+              </div>
+              <button type="submit" class="btn btn-primary" id="addApiBtn" style="align-self:flex-end;height:44px">
+                🚀 Add Target
+              </button>
+            </form>
+          </div>
+
+          <!-- Filters -->
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap;align-items:center">
+            <div class="search-field">
+              <span class="search-icon">🔍</span>
+              <input id="apiSearch" placeholder="Search endpoints..." oninput="filterApiList()">
             </div>
-            <div class="input-group">
-                <label>Endpoint URL</label>
-                <input type="url" id="apiUrl" placeholder="https://api.example.com/health" required>
-            </div>
-            <button type="submit" class="btn">Register Target</button>
-        </form>
-    </div>
+            <select id="apiStatusFilter" onchange="filterApiList()"
+              style="padding:.6rem .9rem;border-radius:10px;font-size:.85rem">
+              <option value="">All Status</option>
+              <option value="healthy">Healthy</option>
+              <option value="degraded">Degraded</option>
+              <option value="down">Down</option>
+              <option value="nodata">No Data</option>
+            </select>
+            <div style="margin-left:auto;font-size:.8rem;color:var(--muted)" id="apiListCount"></div>
+          </div>
 
-    <div class="flex-between">
-        <h2 style="margin: 0;">System Overview</h2>
-        <button class="btn btn-outline" onclick="fetchData()">🔄 Refresh Data</button>
-    </div>
-
-    <div class="grid">
-        <div class="stat-card">
-            <h2>Monitored APIs</h2>
-            <div class="stat-value" id="total-apis">0</div>
-        </div>
-        <div class="stat-card">
-            <h2>Global Uptime</h2>
-            <div class="stat-value" id="global-uptime">0%</div>
-        </div>
-        <div class="stat-card">
-            <h2>Avg Response Time</h2>
-            <div class="stat-value" id="global-latency">0 ms</div>
-        </div>
-        <div class="stat-card">
-            <h2>Total Pings</h2>
-            <div class="stat-value" id="total-pings">0</div>
-        </div>
-    </div>
-
-    <div class="chart-row">
-        <div class="card">
-            <h2>Latency vs Uptime</h2>
-            <canvas id="latencyChart"></canvas>
-        </div>
-        <div class="card">
-            <h2>Overall Health</h2>
-            <canvas id="healthChart"></canvas>
-        </div>
-    </div>
-
-    <div class="card" style="overflow-x: auto;">
-        <h2>Monitored Targets</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Target API</th>
+          <div class="card">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Target</th>
                     <th>Status</th>
                     <th>Uptime</th>
                     <th>Avg Latency</th>
-                    <th>Slow Pings</th>
+                    <th>Pings</th>
+                    <th>Last Checked</th>
                     <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="apiTableBody">
-                <!-- Rows -->
-            </tbody>
-        </table>
+                  </tr>
+                </thead>
+                <tbody id="api-list-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ════════ SCREEN: API DETAIL ════════ -->
+        <section class="screen" id="screen-detail">
+          <div class="section-header">
+            <div style="display:flex;align-items:center;gap:.75rem">
+              <button class="btn btn-ghost" onclick="showScreen('apis')" style="padding:.4rem .75rem;font-size:.8rem">←
+                Back</button>
+              <div>
+                <div class="section-title" id="detail-title">API Detail</div>
+                <div class="section-sub" id="detail-url"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-panel" style="margin-bottom:1.5rem">
+            <div class="detail-row" id="detail-meta-row"></div>
+            <div class="card-title" style="margin-bottom:.75rem">Uptime (last 90 pings)</div>
+            <div class="uptime-grid" id="detail-uptime-grid"></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem">
+            <div class="card">
+              <div class="card-title" style="margin-bottom:.75rem">Response Time Trend</div>
+              <div class="chart-container" style="height:200px"><canvas id="chart-detail-latency"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-title" style="margin-bottom:.75rem">Success vs Error</div>
+              <div class="chart-container" style="height:200px"><canvas id="chart-detail-pie"></canvas></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="margin-bottom:1rem">📋 Raw Ping Logs</div>
+            <div class="table-wrap" style="max-height:300px;overflow-y:auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Status</th>
+                    <th>Duration</th>
+                    <th>Success</th>
+                  </tr>
+                </thead>
+                <tbody id="detail-log-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ════════ SCREEN: ANALYTICS ════════ -->
+        <section class="screen" id="screen-analytics">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Analytics</div>
+              <div class="section-sub">Performance trends & error analysis</div>
+            </div>
+          </div>
+
+          <div class="stats-grid" style="margin-bottom:1.5rem">
+            <div class="stat-card blue">
+              <div class="stat-header">
+                <div class="stat-label">Total Pings</div>
+                <div class="stat-icon blue">📡</div>
+              </div>
+              <div class="stat-value blue" id="a-total">—</div>
+            </div>
+            <div class="stat-card green">
+              <div class="stat-header">
+                <div class="stat-label">Successful</div>
+                <div class="stat-icon green">✅</div>
+              </div>
+              <div class="stat-value green" id="a-success">—</div>
+            </div>
+            <div class="stat-card red">
+              <div class="stat-header">
+                <div class="stat-label">Failed</div>
+                <div class="stat-icon red">❌</div>
+              </div>
+              <div class="stat-value red" id="a-fail">—</div>
+            </div>
+            <div class="stat-card orange">
+              <div class="stat-header">
+                <div class="stat-label">Slow (>500ms)</div>
+                <div class="stat-icon orange">🐢</div>
+              </div>
+              <div class="stat-value orange" id="a-slow">—</div>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <div class="card">
+              <div class="card-title" style="margin-bottom:.75rem">Request Volume (last 24h)</div>
+              <div class="chart-container" style="height:220px"><canvas id="chart-timeline"></canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-title" style="margin-bottom:.75rem">HTTP Status Distribution</div>
+              <div class="chart-container" style="height:220px"><canvas id="chart-status-dist"></canvas></div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom:1.5rem">
+            <div class="card-title" style="margin-bottom:1rem">Endpoint Performance Breakdown</div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Endpoint</th>
+                    <th>Requests</th>
+                    <th>Uptime</th>
+                    <th>Avg Latency</th>
+                    <th>Errors</th>
+                    <th>Slow</th>
+                    <th>Health</th>
+                  </tr>
+                </thead>
+                <tbody id="analytics-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ════════ SCREEN: LOGS ════════ -->
+        <section class="screen" id="screen-logs">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Activity Logs</div>
+              <div class="section-sub">Live feed of all API pings</div>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:center">
+              <select id="logsLimitSel" onchange="loadLogs()"
+                style="padding:.5rem .8rem;border-radius:8px;font-size:.8rem">
+                <option value="50">Last 50</option>
+                <option value="100" selected>Last 100</option>
+                <option value="250">Last 250</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap">
+            <div class="search-field">
+              <span class="search-icon">🔍</span>
+              <input id="logsSearch" placeholder="Filter by URL..." oninput="filterLogs()">
+            </div>
+            <select id="logsStatusFilter" onchange="filterLogs()"
+              style="padding:.6rem .9rem;border-radius:10px;font-size:.85rem">
+              <option value="">All</option>
+              <option value="success">Success Only</option>
+              <option value="error">Errors Only</option>
+            </select>
+          </div>
+
+          <div class="card">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Timestamp</th>
+                    <th>Method</th>
+                    <th>URL</th>
+                    <th>Status</th>
+                    <th>Duration</th>
+                    <th>Result</th>
+                  </tr>
+                </thead>
+                <tbody id="logs-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ════════ SCREEN: SETTINGS ════════ -->
+        <section class="screen" id="screen-settings">
+          <div class="section-header">
+            <div class="section-title">Settings</div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+            <div class="card">
+              <div class="card-title" style="margin-bottom:1.25rem">Monitoring</div>
+              <div class="form-group" style="margin-bottom:1rem">
+                <label>Poll Interval</label>
+                <select style="pointer-events:none;opacity:.6">
+                  <option>Every 10 seconds</option>
+                </select>
+                <div style="font-size:.75rem;color:var(--muted);margin-top:.3rem">Configured in server.js</div>
+              </div>
+              <div class="form-group" style="margin-bottom:1rem">
+                <label>Timeout (ms)</label>
+                <input value="5000" readonly style="opacity:.6">
+              </div>
+              <div class="form-group">
+                <label>Slow Request Threshold (ms)</label>
+                <input value="500" readonly style="opacity:.6">
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-title" style="margin-bottom:1.25rem">Account</div>
+              <div class="form-group" style="margin-bottom:1rem">
+                <label>Display Name</label>
+                <input id="settingsName" value="Admin User">
+              </div>
+              <div class="form-group" style="margin-bottom:1.25rem">
+                <label>Email</label>
+                <input id="settingsEmail" value="admin@monitor.dev">
+              </div>
+              <button class="btn btn-primary" onclick="saveSettings()" style="width:100%;justify-content:center">Save
+                Changes</button>
+            </div>
+
+            <div class="card" style="grid-column:1/-1">
+              <div class="card-title" style="margin-bottom:1rem">System Information</div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem">
+                <div class="detail-item">
+                  <div class="detail-label">Server Port</div>
+                  <div class="detail-value">3000</div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Dashboard Version</div>
+                  <div class="detail-value">2.0.0</div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Log Rotation</div>
+                  <div class="detail-value">5,000 entries max</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
     </div>
+  </div>
 
-    <script>
-        let latencyChart, healthChart;
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
 
-        document.getElementById('addApiForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            btn.innerHTML = 'Adding...';
-            
-            const url = document.getElementById('apiUrl').value;
-            const method = document.getElementById('apiMethod').value;
-            
-            try {
-                const res = await fetch('/api/targets', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ url, method })
-                });
-                if(res.ok) {
-                    document.getElementById('apiUrl').value = '';
-                    fetchData();
-                } else {
-                    const data = await res.json();
-                    alert(data.error || 'Failed to add');
-                }
-            } catch(e) {
-                alert('Network error');
-            }
-            btn.innerHTML = 'Register Target';
+  <!-- ════════════════════════════════ JAVASCRIPT ════════════════════════════ -->
+  <script>
+    // ── State ─────────────────────────────────────────────────────────────────────
+    let state = {
+      analytics: null,
+      targets: [],
+      activity: [],
+      logs: [],
+      user: null,
+      isSignup: false,
+      chartRefs: {}
+    };
+
+    // ── Auth ──────────────────────────────────────────────────────────────────────
+    const USERS_KEY = 'apimon_users';
+    const SESSION_KEY = 'apimon_session';
+
+    function getUsers() {
+      return JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+    }
+    function saveUsers(u) {
+      localStorage.setItem(USERS_KEY, JSON.stringify(u));
+    }
+    function setSession(u) {
+      localStorage.setItem(SESSION_KEY, JSON.stringify(u));
+      state.user = u;
+    }
+    function getSession() {
+      try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; }
+    }
+    function clearSession() {
+      localStorage.removeItem(SESSION_KEY);
+      state.user = null;
+    }
+
+    // Register default admin if no users exist
+    (function () {
+      if (!getUsers().length) {
+        saveUsers([{ email: 'admin@monitor.dev', password: 'admin123', name: 'Admin User' }]);
+      }
+    })();
+
+    document.getElementById('authForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const email = document.getElementById('authEmail').value.trim().toLowerCase();
+      const password = document.getElementById('authPassword').value;
+      const errEl = document.getElementById('authError');
+
+      errEl.classList.remove('visible');
+
+      if (state.isSignup) {
+        const name = document.getElementById('authName').value.trim();
+        if (!name) { errEl.textContent = 'Name is required'; errEl.classList.add('visible'); return; }
+        const users = getUsers();
+        if (users.find(u => u.email === email)) {
+          errEl.textContent = 'Account already exists'; errEl.classList.add('visible'); return;
+        }
+        const user = { email, password, name };
+        users.push(user);
+        saveUsers(users);
+        setSession(user);
+      } else {
+        const user = getUsers().find(u => u.email === email && u.password === password);
+        if (!user) { errEl.textContent = 'Invalid credentials'; errEl.classList.add('visible'); return; }
+        setSession(user);
+      }
+      bootApp();
+    });
+
+    document.getElementById('authToggleLink').addEventListener('click', () => {
+      state.isSignup = !state.isSignup;
+      document.getElementById('authSubtitle').textContent = state.isSignup ? 'Create your account' : 'Sign in to your dashboard';
+      document.getElementById('authBtn').textContent = state.isSignup ? 'Create Account' : 'Sign In';
+      document.getElementById('authToggleText').textContent = state.isSignup ? 'Already have an account?' : "Don't have an account?";
+      document.getElementById('authToggleLink').textContent = state.isSignup ? 'Sign in' : 'Sign up';
+      document.getElementById('authNameGroup').style.display = state.isSignup ? 'flex' : 'none';
+      document.getElementById('authError').classList.remove('visible');
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      clearSession();
+      document.getElementById('appLayout').style.display = 'none';
+      document.getElementById('authWrapper').style.display = 'flex';
+    });
+
+    function bootApp() {
+      document.getElementById('authWrapper').style.display = 'none';
+      document.getElementById('appLayout').style.display = 'flex';
+      document.getElementById('userDisplay').textContent = state.user?.name || state.user?.email || 'User';
+      document.getElementById('settingsName').value = state.user?.name || '';
+      document.getElementById('settingsEmail').value = state.user?.email || '';
+      fetchAll();
+      setInterval(fetchAll, 10000);
+    }
+
+    // Auto-boot if session exists
+    document.addEventListener('DOMContentLoaded', () => {
+      const sess = getSession();
+      if (sess) { state.user = sess; bootApp(); }
+    });
+
+    // ── Navigation ────────────────────────────────────────────────────────────────
+    const screenMeta = {
+      dashboard: 'Dashboard',
+      apis: 'API Targets',
+      detail: 'API Detail',
+      analytics: 'Analytics',
+      logs: 'Activity Logs',
+      settings: 'Settings'
+    };
+
+    function showScreen(name) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      const el = document.getElementById('screen-' + name);
+      const navEl = document.getElementById('nav-' + name);
+      if (el) el.classList.add('active');
+      if (navEl) navEl.classList.add('active');
+      document.getElementById('pageTitle').textContent = screenMeta[name] || name;
+
+      if (name === 'analytics') renderAnalyticsScreen();
+      if (name === 'logs') loadLogs();
+      closeSidebar();
+    }
+
+    document.querySelectorAll('.nav-link[data-screen]').forEach(link => {
+      link.addEventListener('click', () => showScreen(link.dataset.screen));
+    });
+
+    // Sidebar mobile toggle
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('open');
+    }
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('sidebarOverlay').classList.toggle('open');
+    });
+    document.getElementById('sidebarOverlay').addEventListener('click', closeSidebar);
+    document.getElementById('globalRefreshBtn').addEventListener('click', () => {
+      const btn = document.getElementById('globalRefreshBtn');
+      btn.classList.add('spinning');
+      fetchAll().then(() => { setTimeout(() => btn.classList.remove('spinning'), 500); });
+    });
+
+    // ── Toast ─────────────────────────────────────────────────────────────────────
+    function toast(msg, type = 'info') {
+      const el = Object.assign(document.createElement('div'), {
+        className: `toast ${type}`,
+        textContent: msg
+      });
+      document.getElementById('toastContainer').prepend(el);
+      setTimeout(() => el.remove(), 3100);
+    }
+
+    // ── API Calls ─────────────────────────────────────────────────────────────────
+    async function api(url) {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    }
+
+    async function fetchAll() {
+      try {
+        const [analytics, targets, activity] = await Promise.all([
+          api('/api/analytics'),
+          api('/api/targets'),
+          api('/api/activity?limit=20')
+        ]);
+        state.analytics = analytics;
+        state.targets = targets;
+        state.activity = activity;
+        renderDashboard();
+        renderApiList();
+        updateFailBadge();
+      } catch (e) {
+        console.error('Fetch error', e);
+      }
+    }
+
+    function updateFailBadge() {
+      const details = Object.values(state.analytics?.endpointDetails || {});
+      const downs = details.filter(d => uptimeStatus(d.uptime) === 'down' || uptimeStatus(d.uptime) === 'degraded').length;
+      const badge = document.getElementById('failBadge');
+      badge.style.display = downs ? 'inline-block' : 'none';
+      badge.textContent = downs;
+    }
+
+    // ── DASHBOARD ─────────────────────────────────────────────────────────────────
+    function renderDashboard() {
+      const { summary, endpointDetails } = state.analytics || {};
+      if (!summary) return;
+
+      // Stat cards
+      const details = Object.values(endpointDetails || {});
+      const uptimes = details.map(d => d.uptime || 0);
+      const global = uptimes.length ? uptimes.reduce((a, b) => a + b, 0) / uptimes.length : 0;
+
+      document.getElementById('s-total-apis').textContent = state.targets.length;
+      document.getElementById('s-total-apis-sub').textContent = `${details.length} with data`;
+      document.getElementById('s-uptime').textContent = global.toFixed(1) + '%';
+      document.getElementById('s-uptime-sub').textContent = `${summary.successCount || 0} successful pings`;
+      document.getElementById('s-latency').textContent = Math.round(summary.averageResponseTime || 0) + 'ms';
+      document.getElementById('s-latency-sub').textContent = `${summary.totalSlowRequests || 0} slow pings`;
+      document.getElementById('s-error-rate').textContent = (summary.errorRate || 0).toFixed(1) + '%';
+      document.getElementById('s-error-rate-sub').textContent = `${summary.failureCount || 0} total failures`;
+
+      // Endpoint table
+      const tbody = document.getElementById('dash-api-tbody');
+      if (!details.length) {
+        tbody.innerHTML = `<tr><td colspan="5" class="empty-state">No data yet — waiting for pings</td></tr>`;
+      } else {
+        tbody.innerHTML = details.map(d => {
+          const status = uptimeStatus(d.uptime);
+          return `<tr onclick="openDetail('${encodeURIComponent(d.method + ' ' + d.endpoint)}')" style="cursor:pointer">
+        <td>
+          <span class="method-pill ${d.method}">${d.method}</span>
+          <span style="margin-left:.5rem;font-size:.82rem;color:var(--muted)">${truncate(d.endpoint, 50)}</span>
+        </td>
+        <td>${statusBadge(status)}</td>
+        <td>
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <div class="progress-bar" style="width:80px">
+              <div class="progress-fill ${status === 'healthy' ? 'green' : status === 'degraded' ? 'orange' : 'red'}"
+                   style="width:${d.uptime.toFixed(0)}%"></div>
+            </div>
+            <span style="font-size:.8rem">${d.uptime.toFixed(1)}%</span>
+          </div>
+        </td>
+        <td>${Math.round(d.averageResponseTime)}ms</td>
+        <td>${d.slowRequests}</td>
+      </tr>`;
+        }).join('');
+      }
+
+      // Activity feed
+      const feed = document.getElementById('dash-activity-list');
+      feed.innerHTML = state.activity.slice(0, 15).map(log => `
+    <div class="activity-item">
+      <div class="activity-dot ${log.success ? 'success' : 'danger'}"></div>
+      <span class="method-pill ${log.method}" style="flex-shrink:0">${log.method}</span>
+      <div class="activity-url" title="${log.url}">${truncate(log.url, 38)}</div>
+      <span class="activity-status ${log.success ? 'ok' : 'err'}">${log.status || 'ERR'}</span>
+      <span class="activity-meta">${Math.round(log.duration)}ms</span>
+    </div>
+  `).join('') || '<div class="empty-state" style="padding:1rem;font-size:.82rem">No activity yet</div>';
+
+      // Charts
+      renderLatencyUptimeChart(details);
+      renderHealthDonut(details);
+    }
+
+    function renderLatencyUptimeChart(details) {
+      const ctx = document.getElementById('chart-latency-uptime');
+      if (state.chartRefs.latencyUptime) state.chartRefs.latencyUptime.destroy();
+      state.chartRefs.latencyUptime = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: details.map(d => truncate(d.endpoint.replace(/^https?:\/\//, ''), 28)),
+          datasets: [
+            { label: 'Avg Latency (ms)', data: details.map(d => Math.round(d.averageResponseTime)), backgroundColor: 'rgba(59,130,246,.7)', yAxisID: 'y', borderRadius: 6 },
+            { label: 'Uptime (%)', data: details.map(d => d.uptime.toFixed(1)), type: 'line', borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,.08)', fill: true, tension: .4, pointRadius: 5, pointBackgroundColor: '#22c55e', yAxisID: 'y1' }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: {
+            y: { position: 'left', grid: { color: '#1e2d4d' }, ticks: { color: '#6b82b0' } },
+            y1: { position: 'right', min: 0, max: 100, grid: { display: false }, ticks: { color: '#22c55e' } },
+            x: { grid: { display: false }, ticks: { color: '#6b82b0' } }
+          },
+          plugins: { legend: { labels: { color: '#e8f0ff', font: { size: 11 } } } }
+        }
+      });
+    }
+
+    function renderHealthDonut(details) {
+      const ctx = document.getElementById('chart-health-donut');
+      if (state.chartRefs.healthDonut) state.chartRefs.healthDonut.destroy();
+      let h = 0, d2 = 0, n = 0;
+      details.forEach(d => {
+        const s = uptimeStatus(d.uptime);
+        if (s === 'healthy') h++; else if (s === 'degraded') d2++; else n++;
+      });
+      // Ensure chart has meaningful data
+      const total = h + d2 + n;
+      state.chartRefs.healthDonut = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Healthy', 'Degraded', 'Down'],
+          datasets: [{ data: total ? [h, d2, n] : [1, 0, 0], backgroundColor: ['rgba(34,197,94,.85)', 'rgba(245,158,11,.85)', 'rgba(239,68,68,.85)'], borderWidth: 2, borderColor: '#111b30' }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          cutout: '70%',
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#e8f0ff', padding: 16, font: { size: 11 } } }
+          }
+        }
+      });
+    }
+
+    // ── API LIST ──────────────────────────────────────────────────────────────────
+    let allApiRows = [];
+    function renderApiList() {
+      const details = state.analytics?.endpointDetails || {};
+      allApiRows = state.targets.map(t => {
+        const key = `${t.method} ${t.url}`;
+        const stats = details[key] || null;
+        return { target: t, stats };
+      });
+      filterApiList();
+      document.getElementById('apiListCount').textContent = `${state.targets.length} endpoints`;
+    }
+
+    function filterApiList() {
+      const q = (document.getElementById('apiSearch').value || '').toLowerCase();
+      const sf = document.getElementById('apiStatusFilter').value;
+      const tbody = document.getElementById('api-list-tbody');
+
+      const filtered = allApiRows.filter(({ target, stats }) => {
+        const urlMatch = target.url.toLowerCase().includes(q) || (target.name || '').toLowerCase().includes(q);
+        let statusMatch = true;
+        if (sf) {
+          if (!stats && sf === 'nodata') statusMatch = true;
+          else if (!stats) statusMatch = false;
+          else statusMatch = uptimeStatus(stats.uptime) === sf;
+        }
+        return urlMatch && statusMatch;
+      });
+
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state"><div class="empty-icon">🔍</div><div>No endpoints found</div></div></td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(({ target: t, stats: s }) => {
+        const status = s ? uptimeStatus(s.uptime) : 'nodata';
+        const checkedAgo = s?.lastChecked ? timeAgo(s.lastChecked) : '—';
+        return `<tr>
+      <td>
+        <div style="font-weight:600;display:flex;align-items:center;gap:.5rem">
+          <span class="method-pill ${t.method}">${t.method}</span>
+          <span style="font-size:.85rem">${t.name || truncate(t.url, 40)}</span>
+        </div>
+        <div style="font-size:.75rem;color:var(--muted);margin-top:.25rem;font-family:monospace">${truncate(t.url, 55)}</div>
+      </td>
+      <td>${statusBadge(status)}</td>
+      <td>${s ? `
+        <div style="display:flex;align-items:center;gap:.5rem">
+          <div class="progress-bar" style="width:70px"><div class="progress-fill ${status === 'healthy' ? 'green' : status === 'degraded' ? 'orange' : 'red'}" style="width:${Math.round(s.uptime)}%"></div></div>
+          <span style="font-size:.8rem">${s.uptime.toFixed(2)}%</span>
+        </div>` : '—'}</td>
+      <td>${s ? Math.round(s.averageResponseTime) + 'ms' : '—'}</td>
+      <td>${s ? s.totalRequests : '—'}</td>
+      <td><span style="font-size:.78rem;color:var(--muted)">${checkedAgo}</span></td>
+      <td style="display:flex;gap:.5rem">
+        <button class="btn btn-ghost" style="padding:.35rem .75rem;font-size:.76rem" onclick="openDetail('${encodeURIComponent(t.method + ' ' + t.url)}')">🔍 Detail</button>
+        <button class="btn btn-danger-ghost" onclick="removeTarget(${t.id})">✕ Remove</button>
+      </td>
+    </tr>`;
+      }).join('');
+    }
+
+    // Add API form
+    document.getElementById('addApiForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = document.getElementById('addApiBtn');
+      const url = document.getElementById('apiUrl').value.trim();
+      const method = document.getElementById('apiMethod').value;
+      const name = document.getElementById('apiName').value.trim();
+      btn.textContent = '⏳ Adding...';
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/targets', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url, method, name })
         });
+        const data = await r.json();
+        if (r.ok) {
+          toast('Target registered successfully!', 'success');
+          document.getElementById('apiUrl').value = '';
+          document.getElementById('apiName').value = '';
+          await fetchAll();
+        } else {
+          toast(data.error || 'Failed to add target', 'error');
+        }
+      } catch { toast('Network error', 'error'); }
+      btn.textContent = '🚀 Add Target';
+      btn.disabled = false;
+    });
 
-        async function removeTarget(id) {
-            if(!confirm("Stop monitoring this API?")) return;
-            await fetch('/api/targets/' + id, { method: 'DELETE' });
-            fetchData();
+    async function removeTarget(id) {
+      if (!confirm('Stop monitoring this endpoint?')) return;
+      await fetch('/api/targets/' + id, { method: 'DELETE' });
+      toast('Target removed', 'info');
+      fetchAll();
+    }
+
+    // ── DETAIL SCREEN ─────────────────────────────────────────────────────────────
+    async function openDetail(encodedKey) {
+      const key = decodeURIComponent(encodedKey);
+      const [method, ...rest] = key.split(' ');
+      const url = rest.join(' ');
+
+      showScreen('detail');
+      document.getElementById('detail-title').textContent = method + ' ' + truncate(url, 50);
+      document.getElementById('detail-url').textContent = url;
+
+      try {
+        const logs = await api(`/api/logs?url=${encodeURIComponent(url)}&limit=200`);
+        const filtered = logs.filter(l => l.method === method);
+        const stats = state.analytics?.endpointDetails?.[key];
+
+        // Meta row
+        if (stats) {
+          document.getElementById('detail-meta-row').innerHTML = [
+            { label: 'Total Pings', value: stats.totalRequests },
+            { label: 'Uptime', value: stats.uptime.toFixed(2) + '%' },
+            { label: 'Avg Latency', value: Math.round(stats.averageResponseTime) + 'ms' },
+            { label: 'Errors', value: stats.errors },
+            { label: 'Slow Pings', value: stats.slowRequests },
+            { label: 'Last Status', value: stats.lastStatus }
+          ].map(i => `<div class="detail-item"><div class="detail-label">${i.label}</div><div class="detail-value">${i.value}</div></div>`).join('');
         }
 
-        async function fetchData() {
-            try {
-                const [targetsRes, reportRes] = await Promise.all([
-                    fetch('/api/targets').catch(()=>null),
-                    fetch('/report.json').catch(()=>null)
-                ]);
+        // Uptime blocks
+        const grid = document.getElementById('detail-uptime-grid');
+        const blocks = filtered.slice(-90);
+        grid.innerHTML = blocks.map(l =>
+          `<div class="uptime-block" title="${l.timestamp} – ${l.status}" style="background:${l.success ? 'var(--success)' : 'var(--danger)'}"></div>`
+        ).join('') || '<span style="color:var(--muted);font-size:.8rem">No data</span>';
 
-                const targets = targetsRes && targetsRes.ok ? await targetsRes.json() : [];
-                let report = null;
-                if(reportRes && reportRes.ok) {
-                    report = await reportRes.json();
-                }
+        // Log table
+        const tbody = document.getElementById('detail-log-tbody');
+        tbody.innerHTML = filtered.slice(-50).reverse().map(l => `
+      <tr>
+        <td style="font-size:.76rem;color:var(--muted)">${new Date(l.timestamp).toLocaleString()}</td>
+        <td><span class="badge ${l.status >= 200 && l.status < 300 ? 'badge-success' : 'badge-danger'}">${l.status || 'N/A'}</span></td>
+        <td>${Math.round(l.duration)}ms</td>
+        <td>${l.success ? '<span style="color:var(--success)">✓</span>' : '<span style="color:var(--danger)">✗</span>'}</td>
+      </tr>
+    `).join('') || `<tr><td colspan="4" class="empty-state">No logs</td></tr>`;
 
-                updateDashboard(targets, report);
-            } catch(e) { console.error(e); }
+        // Detail charts
+        renderDetailCharts(filtered, stats);
+      } catch (e) { toast('Failed to load detail', 'error'); }
+    }
+
+    function renderDetailCharts(logs, stats) {
+      const recent = logs.slice(-30);
+
+      // Latency trend
+      const lc = document.getElementById('chart-detail-latency');
+      if (state.chartRefs.detailLatency) state.chartRefs.detailLatency.destroy();
+      state.chartRefs.detailLatency = new Chart(lc, {
+        type: 'line',
+        data: {
+          labels: recent.map((_, i) => i + 1),
+          datasets: [{ label: 'Latency (ms)', data: recent.map(l => Math.round(l.duration)), borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,.08)', fill: true, tension: .4, pointRadius: 2, pointHitRadius: 10 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#1e2d4d' }, ticks: { color: '#6b82b0' } }, x: { display: false } } }
+      });
+
+      // Pie
+      const pc = document.getElementById('chart-detail-pie');
+      if (state.chartRefs.detailPie) state.chartRefs.detailPie.destroy();
+      const ok = logs.filter(l => l.success).length;
+      const fail = logs.length - ok;
+      state.chartRefs.detailPie = new Chart(pc, {
+        type: 'pie',
+        data: {
+          labels: ['Success', 'Failed'],
+          datasets: [{ data: [ok, fail], backgroundColor: ['rgba(34,197,94,.85)', 'rgba(239,68,68,.85)'], borderWidth: 2, borderColor: '#111b30' }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#e8f0ff', font: { size: 11 } } } } }
+      });
+    }
+
+    // ── ANALYTICS SCREEN ──────────────────────────────────────────────────────────
+    function renderAnalyticsScreen() {
+      if (!state.analytics) return;
+      const { summary, endpointDetails, timeline } = state.analytics;
+
+      document.getElementById('a-total').textContent = summary.totalRequests || 0;
+      document.getElementById('a-success').textContent = summary.successCount || 0;
+      document.getElementById('a-fail').textContent = summary.failureCount || 0;
+      document.getElementById('a-slow').textContent = summary.totalSlowRequests || 0;
+
+      // Timeline chart
+      const tc = document.getElementById('chart-timeline');
+      if (state.chartRefs.timeline) state.chartRefs.timeline.destroy();
+      const tl = (timeline || []).slice(-24);
+      state.chartRefs.timeline = new Chart(tc, {
+        type: 'bar',
+        data: {
+          labels: tl.map(h => h.hour.slice(11) + ':00'),
+          datasets: [
+            { label: 'Requests', data: tl.map(h => h.count), backgroundColor: 'rgba(59,130,246,.7)', borderRadius: 4 },
+            { label: 'Errors', data: tl.map(h => h.errors), backgroundColor: 'rgba(239,68,68,.7)', borderRadius: 4 }
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          scales: { y: { grid: { color: '#1e2d4d' }, ticks: { color: '#6b82b0' } }, x: { grid: { display: false }, ticks: { color: '#6b82b0', maxRotation: 45 } } },
+          plugins: { legend: { labels: { color: '#e8f0ff', font: { size: 11 } } } }
         }
+      });
 
-        function updateDashboard(targets, report) {
-            document.getElementById('total-apis').innerText = targets.length;
-            
-            const tbody = document.getElementById('apiTableBody');
-            tbody.innerHTML = '';
+      // Status distribution doughnut
+      const sc = document.getElementById('chart-status-dist');
+      if (state.chartRefs.statusDist) state.chartRefs.statusDist.destroy();
+      const statusCounts = summary.statusCounts || {};
+      const scLabels = Object.keys(statusCounts);
+      const scColors = scLabels.map(k => k.startsWith('2') ? '#22c55e' : k.startsWith('4') ? '#f59e0b' : k.startsWith('5') ? '#ef4444' : '#6b82b0');
+      state.chartRefs.statusDist = new Chart(sc, {
+        type: 'doughnut',
+        data: { labels: scLabels, datasets: [{ data: scLabels.map(k => statusCounts[k]), backgroundColor: scColors, borderWidth: 2, borderColor: '#111b30' }] },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom', labels: { color: '#e8f0ff', font: { size: 11 } } } } }
+      });
 
-            let globalPings = 0;
-            let globalUptimeSum = 0;
-            let globalLatencySum = 0;
-            let APIsWithData = 0;
-            let healthyCount = 0;
-            let degradedCount = 0;
-            let downCount = 0;
+      // Breakdown table
+      const details = Object.values(endpointDetails || {});
+      document.getElementById('analytics-tbody').innerHTML = details.map(d => {
+        const status = uptimeStatus(d.uptime);
+        return `<tr>
+      <td>
+        <span class="method-pill ${d.method}">${d.method}</span>
+        <span style="font-size:.8rem;color:var(--muted);margin-left:.5rem">${truncate(d.endpoint, 44)}</span>
+      </td>
+      <td>${d.totalRequests}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:.5rem">
+          <div class="progress-bar" style="width:60px"><div class="progress-fill ${status === 'healthy' ? 'green' : status === 'degraded' ? 'orange' : 'red'}" style="width:${Math.round(d.uptime)}%"></div></div>
+          ${d.uptime.toFixed(1)}%
+        </div>
+      </td>
+      <td>${Math.round(d.averageResponseTime)}ms</td>
+      <td><span class="${d.errors > 0 ? 'color:var(--danger)' : ''}" style="${d.errors > 0 ? 'color:var(--danger)' : 'color:var(--success)'}">${d.errors}</span></td>
+      <td>${d.slowRequests}</td>
+      <td>${statusBadge(status)}</td>
+    </tr>`;
+      }).join('') || `<tr><td colspan="7"><div class="empty-state">No data yet</div></td></tr>`;
+    }
 
-            const labels = [];
-            const latencies = [];
-            const uptimes = [];
+    // ── LOGS SCREEN ───────────────────────────────────────────────────────────────
+    let rawLogs = [];
+    async function loadLogs() {
+      const limit = document.getElementById('logsLimitSel').value;
+      try {
+        rawLogs = await api(`/api/logs?limit=${limit}`);
+        rawLogs = rawLogs.reverse();
+        filterLogs();
+      } catch { toast('Failed to load logs', 'error'); }
+    }
 
-            targets.forEach(t => {
-                const key = `${t.method} ${t.url}`;
-                const stats = report && report.endpointDetails ? report.endpointDetails[key] : null;
+    function filterLogs() {
+      const q = (document.getElementById('logsSearch').value || '').toLowerCase();
+      const sf = document.getElementById('logsStatusFilter').value;
 
-                let uptime = 0;
-                let latency = 0;
-                let statusHtml = '<span class="badge badge-warning">No Data</span>';
-                let slowPings = 0;
+      const filtered = rawLogs.filter(log => {
+        const urlMatch = log.url.toLowerCase().includes(q);
+        const statusMatch = sf === 'success' ? log.success : sf === 'error' ? !log.success : true;
+        return urlMatch && statusMatch;
+      });
 
-                if (stats && stats.totalRequests > 0) {
-                    uptime = ((stats.totalRequests - stats.errors) / stats.totalRequests) * 100;
-                    latency = stats.averageResponseTime;
-                    slowPings = stats.slowRequests;
-                    
-                    globalPings += stats.totalRequests;
-                    globalUptimeSum += uptime;
-                    globalLatencySum += latency;
-                    APIsWithData++;
+      const tbody = document.getElementById('logs-tbody');
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state">No logs match your filter</div></td></tr>`;
+        return;
+      }
+      tbody.innerHTML = filtered.map((log, i) => `
+    <tr>
+      <td style="color:var(--muted);font-size:.75rem">${i + 1}</td>
+      <td style="font-size:.76rem;color:var(--muted)">${new Date(log.timestamp).toLocaleString()}</td>
+      <td><span class="method-pill ${log.method}">${log.method}</span></td>
+      <td><span style="font-family:monospace;font-size:.78rem">${truncate(log.url, 50)}</span></td>
+      <td><span class="badge ${log.status >= 200 && log.status < 300 ? 'badge-success' : log.status >= 400 ? 'badge-danger' : log.status === 0 ? 'badge-neutral' : 'badge-warning'}">${log.status || 'ERR'}</span></td>
+      <td>${Math.round(log.duration)}ms</td>
+      <td>${log.success ? '<span class="badge badge-success"><span class="badge-dot"></span>OK</span>' : '<span class="badge badge-danger"><span class="badge-dot"></span>Fail</span>'}</td>
+    </tr>
+  `).join('');
+    }
 
-                    if(uptime >= 99) {
-                        statusHtml = '<span class="badge badge-success">Healthy</span>';
-                        healthyCount++;
-                    } else if(uptime >= 90) {
-                        statusHtml = '<span class="badge badge-warning">Degraded</span>';
-                        degradedCount++;
-                    } else {
-                        statusHtml = '<span class="badge badge-danger">Down</span>';
-                        downCount++;
-                    }
-                    
-                    labels.push(t.url.replace(/^https?:\/\//, '').substring(0, 30));
-                    latencies.push(latency.toFixed(0));
-                    uptimes.push(uptime.toFixed(1));
-                }
+    // ── SETTINGS ──────────────────────────────────────────────────────────────────
+    function saveSettings() {
+      if (state.user) {
+        state.user.name = document.getElementById('settingsName').value;
+        state.user.email = document.getElementById('settingsEmail').value;
+        const users = getUsers().map(u => u.email === state.user.email ? state.user : u);
+        saveUsers(users);
+        setSession(state.user);
+        document.getElementById('userDisplay').textContent = state.user.name;
+        toast('Settings saved!', 'success');
+      }
+    }
 
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>
-                        <strong style="color:var(--primary)">${t.method}</strong> 
-                        ${t.url}
-                    </td>
-                    <td>${statusHtml}</td>
-                    <td class="${uptime < 99 ? (uptime < 90 ? 'color-danger' : 'color-warning') : 'color-success'}">
-                        ${stats ? uptime.toFixed(2) + '%' : '-'}
-                    </td>
-                    <td>${stats ? Math.round(latency) + ' ms' : '-'}</td>
-                    <td>${slowPings}</td>
-                    <td><button class="btn-danger" onclick="removeTarget(${t.id})">Remove</button></td>
-                `;
-                tbody.appendChild(tr);
-            });
+    // ── HELPERS ───────────────────────────────────────────────────────────────────
+    function uptimeStatus(u) {
+      if (u === undefined || u === null) return 'nodata';
+      if (u >= 99) return 'healthy';
+      if (u >= 90) return 'degraded';
+      return 'down';
+    }
 
-            if (APIsWithData > 0) {
-                document.getElementById('global-uptime').innerText = (globalUptimeSum / APIsWithData).toFixed(2) + '%';
-                document.getElementById('global-latency').innerText = Math.round(globalLatencySum / APIsWithData) + ' ms';
-                document.getElementById('global-uptime').className = 'stat-value ' + ((globalUptimeSum / APIsWithData) < 95 ? 'color-danger' : 'color-success');
-            } else {
-                document.getElementById('global-uptime').innerText = '0%';
-                document.getElementById('global-latency').innerText = '0 ms';
-            }
-            document.getElementById('total-pings').innerText = globalPings;
+    function statusBadge(s) {
+      const map = {
+        healthy: '<span class="badge badge-success"><span class="badge-dot"></span> Healthy</span>',
+        degraded: '<span class="badge badge-warning"><span class="badge-dot"></span> Degraded</span>',
+        down: '<span class="badge badge-danger"><span class="badge-dot"></span> Down</span>',
+        nodata: '<span class="badge badge-neutral">No Data</span>'
+      };
+      return map[s] || map.nodata;
+    }
 
-            updateCharts(labels, latencies, uptimes, healthyCount, degradedCount, downCount);
-        }
+    function truncate(str, max) {
+      return str && str.length > max ? str.slice(0, max) + '…' : str || '';
+    }
 
-        function updateCharts(labels, latencies, uptimes, h, d, n) {
-            // Mixed Chart
-            const ctx1 = document.getElementById('latencyChart').getContext('2d');
-            if(latencyChart) latencyChart.destroy();
-            latencyChart = new Chart(ctx1, {
-                type: 'bar',
-                data: {
-                    labels,
-                    datasets: [
-                        { label: 'Latency (ms)', data: latencies, backgroundColor: '#38bdf8', yAxisID: 'y' },
-                        { label: 'Uptime (%)', data: uptimes, type: 'line', borderColor: '#4ade80', yAxisID: 'y1' }
-                    ]
-                },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    scales: {
-                        y: { type: 'linear', position: 'left', grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
-                        y1: { type: 'linear', position: 'right', grid: { display: false }, min: 0, max: 100, ticks: { color: '#4ade80' } },
-                        x: { grid: { display: false }, ticks: { color: '#94a3b8' } }
-                    },
-                    plugins: { legend: { labels: { color: '#e2e8f0' } } }
-                }
-            });
-
-            // Health Chart
-            const ctx2 = document.getElementById('healthChart').getContext('2d');
-            if(healthChart) healthChart.destroy();
-            healthChart = new Chart(ctx2, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Healthy', 'Degraded', 'Down'],
-                    datasets: [{ data: [h, d, n], backgroundColor: ['#4ade80', '#fbbf24', '#f87171'], borderWidth: 0 }]
-                },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#e2e8f0' } } } }
-            });
-        }
-
-        // Init
-        fetchData();
-        // Auto refresh every 10s
-        setInterval(fetchData, 10000);
-    </script>
+    function timeAgo(iso) {
+      const diff = Math.round((Date.now() - new Date(iso).getTime()) / 1000);
+      if (diff < 60) return diff + 's ago';
+      if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+      return Math.floor(diff / 3600) + 'h ago';
+    }
+  </script>
 </body>
+
 </html>

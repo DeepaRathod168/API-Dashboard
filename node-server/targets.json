@@ -40,5 +40,11 @@
     "url": "https://cat-fact.herokuapp.com/facts",
     "method": "POST",
     "addedAt": "2026-04-01T16:41:42.407Z"
+  },
+  {
+    "id": 1776354819195,
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "addedAt": "2026-04-16T15:53:39.195Z"
   }
 ]

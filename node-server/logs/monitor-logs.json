@@ -718,5 +718,5861 @@
     "status": 503,
     "success": false,
     "duration": 2494.62
+  },
+  {
+    "timestamp": "2026-04-16T15:53:03.706Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 91.52
+  },
+  {
+    "timestamp": "2026-04-16T15:53:04.520Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 814.14
+  },
+  {
+    "timestamp": "2026-04-16T15:53:04.524Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.76
+  },
+  {
+    "timestamp": "2026-04-16T15:53:05.503Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 978.51
+  },
+  {
+    "timestamp": "2026-04-16T15:53:05.708Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 205.29
+  },
+  {
+    "timestamp": "2026-04-16T15:53:08.368Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2660.11
+  },
+  {
+    "timestamp": "2026-04-16T15:53:10.574Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2206.07
+  },
+  {
+    "timestamp": "2026-04-16T15:53:12.629Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.72
+  },
+  {
+    "timestamp": "2026-04-16T15:53:13.441Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.64
+  },
+  {
+    "timestamp": "2026-04-16T15:53:13.443Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.48
+  },
+  {
+    "timestamp": "2026-04-16T15:53:14.246Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 802.82
+  },
+  {
+    "timestamp": "2026-04-16T15:53:14.511Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 265.34
+  },
+  {
+    "timestamp": "2026-04-16T15:53:17.075Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2563.54
+  },
+  {
+    "timestamp": "2026-04-16T15:53:19.532Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2457.2
+  },
+  {
+    "timestamp": "2026-04-16T15:53:22.640Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.18
+  },
+  {
+    "timestamp": "2026-04-16T15:53:23.450Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.68
+  },
+  {
+    "timestamp": "2026-04-16T15:53:23.454Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.62
+  },
+  {
+    "timestamp": "2026-04-16T15:53:24.131Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 677.3
+  },
+  {
+    "timestamp": "2026-04-16T15:53:24.344Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 212.36
+  },
+  {
+    "timestamp": "2026-04-16T15:53:27.122Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2778.44
+  },
+  {
+    "timestamp": "2026-04-16T15:53:29.351Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2228.9
+  },
+  {
+    "timestamp": "2026-04-16T15:53:32.652Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.63
+  },
+  {
+    "timestamp": "2026-04-16T15:53:33.465Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.01
+  },
+  {
+    "timestamp": "2026-04-16T15:53:33.468Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.58
+  },
+  {
+    "timestamp": "2026-04-16T15:53:34.173Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 704.66
+  },
+  {
+    "timestamp": "2026-04-16T15:53:34.349Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 176.42
+  },
+  {
+    "timestamp": "2026-04-16T15:53:36.945Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2596.28
+  },
+  {
+    "timestamp": "2026-04-16T15:53:39.499Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2553.53
+  },
+  {
+    "timestamp": "2026-04-16T15:53:42.654Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.28
+  },
+  {
+    "timestamp": "2026-04-16T15:53:43.470Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.85
+  },
+  {
+    "timestamp": "2026-04-16T15:53:43.475Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 5.56
+  },
+  {
+    "timestamp": "2026-04-16T15:53:44.212Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 736.91
+  },
+  {
+    "timestamp": "2026-04-16T15:53:44.414Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 202.09
+  },
+  {
+    "timestamp": "2026-04-16T15:53:46.879Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2464.53
+  },
+  {
+    "timestamp": "2026-04-16T15:53:49.738Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2858.43
+  },
+  {
+    "timestamp": "2026-04-16T15:53:50.251Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 513.22
+  },
+  {
+    "timestamp": "2026-04-16T15:53:52.658Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.8
+  },
+  {
+    "timestamp": "2026-04-16T15:53:53.474Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.46
+  },
+  {
+    "timestamp": "2026-04-16T15:53:53.477Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.09
+  },
+  {
+    "timestamp": "2026-04-16T15:53:54.456Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 978.44
+  },
+  {
+    "timestamp": "2026-04-16T15:53:54.620Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 164.81
+  },
+  {
+    "timestamp": "2026-04-16T15:53:57.627Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 3006.56
+  },
+  {
+    "timestamp": "2026-04-16T15:54:00.184Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2557.13
+  },
+  {
+    "timestamp": "2026-04-16T15:54:00.592Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 407.66
+  },
+  {
+    "timestamp": "2026-04-16T15:54:02.660Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.9
+  },
+  {
+    "timestamp": "2026-04-16T15:54:03.475Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.41
+  },
+  {
+    "timestamp": "2026-04-16T15:54:03.478Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.64
+  },
+  {
+    "timestamp": "2026-04-16T15:54:04.484Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1007.6
+  },
+  {
+    "timestamp": "2026-04-16T15:54:04.638Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 153.54
+  },
+  {
+    "timestamp": "2026-04-16T15:54:07.314Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2676.34
+  },
+  {
+    "timestamp": "2026-04-16T15:54:09.815Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2501.04
+  },
+  {
+    "timestamp": "2026-04-16T15:54:10.351Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 535.43
+  },
+  {
+    "timestamp": "2026-04-16T15:54:12.660Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.61
+  },
+  {
+    "timestamp": "2026-04-16T15:54:13.482Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 821.46
+  },
+  {
+    "timestamp": "2026-04-16T15:54:13.486Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.88
+  },
+  {
+    "timestamp": "2026-04-16T15:54:14.113Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 626.02
+  },
+  {
+    "timestamp": "2026-04-16T15:54:14.278Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 165.09
+  },
+  {
+    "timestamp": "2026-04-16T15:54:14.601Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 323.32
+  },
+  {
+    "timestamp": "2026-04-16T15:54:16.977Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2375.67
+  },
+  {
+    "timestamp": "2026-04-16T15:54:17.385Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 408.22
+  },
+  {
+    "timestamp": "2026-04-16T15:54:22.669Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.07
+  },
+  {
+    "timestamp": "2026-04-16T15:54:23.488Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.42
+  },
+  {
+    "timestamp": "2026-04-16T15:54:23.490Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.22
+  },
+  {
+    "timestamp": "2026-04-16T15:54:24.247Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 757.74
+  },
+  {
+    "timestamp": "2026-04-16T15:54:24.415Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 167.72
+  },
+  {
+    "timestamp": "2026-04-16T15:54:27.021Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2606.21
+  },
+  {
+    "timestamp": "2026-04-16T15:54:29.183Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2161.42
+  },
+  {
+    "timestamp": "2026-04-16T15:54:29.611Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 428.4
+  },
+  {
+    "timestamp": "2026-04-16T15:54:32.684Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.76
+  },
+  {
+    "timestamp": "2026-04-16T15:54:33.489Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 804.81
+  },
+  {
+    "timestamp": "2026-04-16T15:54:33.491Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.02
+  },
+  {
+    "timestamp": "2026-04-16T15:54:34.129Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 638.71
+  },
+  {
+    "timestamp": "2026-04-16T15:54:34.358Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 228.99
+  },
+  {
+    "timestamp": "2026-04-16T15:54:36.967Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2608.47
+  },
+  {
+    "timestamp": "2026-04-16T15:54:39.503Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2536.55
+  },
+  {
+    "timestamp": "2026-04-16T15:54:39.881Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 377.11
+  },
+  {
+    "timestamp": "2026-04-16T16:25:04.705Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 92.01
+  },
+  {
+    "timestamp": "2026-04-16T16:25:05.524Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 818.48
+  },
+  {
+    "timestamp": "2026-04-16T16:25:05.529Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.72
+  },
+  {
+    "timestamp": "2026-04-16T16:25:06.671Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1142.65
+  },
+  {
+    "timestamp": "2026-04-16T16:25:06.841Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 169.21
+  },
+  {
+    "timestamp": "2026-04-16T16:25:09.585Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2743.87
+  },
+  {
+    "timestamp": "2026-04-16T16:25:12.248Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2663.8
+  },
+  {
+    "timestamp": "2026-04-16T16:25:12.661Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 412.94
+  },
+  {
+    "timestamp": "2026-04-16T16:25:13.626Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.06
+  },
+  {
+    "timestamp": "2026-04-16T16:25:14.441Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.58
+  },
+  {
+    "timestamp": "2026-04-16T16:25:14.445Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.82
+  },
+  {
+    "timestamp": "2026-04-16T16:25:15.424Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 978.82
+  },
+  {
+    "timestamp": "2026-04-16T16:25:15.725Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 300.71
+  },
+  {
+    "timestamp": "2026-04-16T16:25:16.136Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 410.83
+  },
+  {
+    "timestamp": "2026-04-16T16:25:16.549Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 413.26
+  },
+  {
+    "timestamp": "2026-04-16T16:25:16.955Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 405.56
+  },
+  {
+    "timestamp": "2026-04-16T16:25:23.627Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.16
+  },
+  {
+    "timestamp": "2026-04-16T16:25:24.442Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.08
+  },
+  {
+    "timestamp": "2026-04-16T16:25:24.446Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.27
+  },
+  {
+    "timestamp": "2026-04-16T16:25:25.166Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 720.34
+  },
+  {
+    "timestamp": "2026-04-16T16:25:25.363Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 197.12
+  },
+  {
+    "timestamp": "2026-04-16T16:25:27.607Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2243.55
+  },
+  {
+    "timestamp": "2026-04-16T16:25:30.003Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2396.39
+  },
+  {
+    "timestamp": "2026-04-16T16:25:30.482Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 478.87
+  },
+  {
+    "timestamp": "2026-04-16T16:25:33.627Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.64
+  },
+  {
+    "timestamp": "2026-04-16T16:25:34.443Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.91
+  },
+  {
+    "timestamp": "2026-04-16T16:25:34.446Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.54
+  },
+  {
+    "timestamp": "2026-04-16T16:25:35.399Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 952.91
+  },
+  {
+    "timestamp": "2026-04-16T16:25:35.548Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 149.56
+  },
+  {
+    "timestamp": "2026-04-16T16:25:37.952Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2403.9
+  },
+  {
+    "timestamp": "2026-04-16T16:25:40.507Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2554.1
+  },
+  {
+    "timestamp": "2026-04-16T16:25:40.878Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 371.81
+  },
+  {
+    "timestamp": "2026-04-16T16:25:43.643Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 15.91
+  },
+  {
+    "timestamp": "2026-04-16T16:25:44.456Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.89
+  },
+  {
+    "timestamp": "2026-04-16T16:25:44.459Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.44
+  },
+  {
+    "timestamp": "2026-04-16T16:25:45.155Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 696.35
+  },
+  {
+    "timestamp": "2026-04-16T16:25:45.322Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 166.46
+  },
+  {
+    "timestamp": "2026-04-16T16:25:47.880Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2558.34
+  },
+  {
+    "timestamp": "2026-04-16T16:25:50.238Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2357.51
+  },
+  {
+    "timestamp": "2026-04-16T16:25:50.583Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 345.06
+  },
+  {
+    "timestamp": "2026-04-16T16:25:53.651Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 14.52
+  },
+  {
+    "timestamp": "2026-04-16T16:25:54.476Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 824.59
+  },
+  {
+    "timestamp": "2026-04-16T16:25:54.483Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 7.3
+  },
+  {
+    "timestamp": "2026-04-16T16:25:55.176Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 693.06
+  },
+  {
+    "timestamp": "2026-04-16T16:25:55.344Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 167.25
+  },
+  {
+    "timestamp": "2026-04-16T16:25:57.931Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2587.59
+  },
+  {
+    "timestamp": "2026-04-16T16:26:00.167Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2235.56
+  },
+  {
+    "timestamp": "2026-04-16T16:26:00.582Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 414.84
+  },
+  {
+    "timestamp": "2026-04-16T16:26:03.654Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.51
+  },
+  {
+    "timestamp": "2026-04-16T16:26:04.468Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.56
+  },
+  {
+    "timestamp": "2026-04-16T16:26:04.470Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.1
+  },
+  {
+    "timestamp": "2026-04-16T16:26:05.716Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1246.17
+  },
+  {
+    "timestamp": "2026-04-16T16:26:05.906Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 190.27
+  },
+  {
+    "timestamp": "2026-04-16T16:26:08.487Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2580.68
+  },
+  {
+    "timestamp": "2026-04-16T16:26:10.895Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2407.44
+  },
+  {
+    "timestamp": "2026-04-16T16:26:11.242Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 347.34
+  },
+  {
+    "timestamp": "2026-04-16T16:26:13.662Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 11.05
+  },
+  {
+    "timestamp": "2026-04-16T16:26:14.492Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 830.37
+  },
+  {
+    "timestamp": "2026-04-16T16:26:14.503Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 10.57
+  },
+  {
+    "timestamp": "2026-04-16T16:26:15.431Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 927.69
+  },
+  {
+    "timestamp": "2026-04-16T16:26:15.634Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 203.25
+  },
+  {
+    "timestamp": "2026-04-16T16:26:18.062Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2427.03
+  },
+  {
+    "timestamp": "2026-04-16T16:26:20.202Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2139.9
+  },
+  {
+    "timestamp": "2026-04-16T16:26:20.531Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 328.92
+  },
+  {
+    "timestamp": "2026-04-16T16:26:23.660Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.66
+  },
+  {
+    "timestamp": "2026-04-16T16:26:24.473Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.53
+  },
+  {
+    "timestamp": "2026-04-16T16:26:24.475Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.94
+  },
+  {
+    "timestamp": "2026-04-16T16:26:25.023Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 548.32
+  },
+  {
+    "timestamp": "2026-04-16T16:26:25.187Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 163.49
+  },
+  {
+    "timestamp": "2026-04-16T16:26:27.416Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2229.27
+  },
+  {
+    "timestamp": "2026-04-16T16:26:29.496Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2080.25
+  },
+  {
+    "timestamp": "2026-04-16T16:26:29.814Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 317.73
+  },
+  {
+    "timestamp": "2026-04-16T16:26:33.677Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.28
+  },
+  {
+    "timestamp": "2026-04-16T16:26:34.486Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.21
+  },
+  {
+    "timestamp": "2026-04-16T16:26:34.487Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.56
+  },
+  {
+    "timestamp": "2026-04-16T16:26:34.990Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 502.13
+  },
+  {
+    "timestamp": "2026-04-16T16:26:35.144Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.28
+  },
+  {
+    "timestamp": "2026-04-16T16:26:37.361Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2216.63
+  },
+  {
+    "timestamp": "2026-04-16T16:26:39.473Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2112.57
+  },
+  {
+    "timestamp": "2026-04-16T16:26:39.841Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 367.77
+  },
+  {
+    "timestamp": "2026-04-16T16:26:43.676Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.71
+  },
+  {
+    "timestamp": "2026-04-16T16:26:44.486Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.09
+  },
+  {
+    "timestamp": "2026-04-16T16:26:44.487Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.49
+  },
+  {
+    "timestamp": "2026-04-16T16:26:45.035Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 547.86
+  },
+  {
+    "timestamp": "2026-04-16T16:26:45.225Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 189.6
+  },
+  {
+    "timestamp": "2026-04-16T16:26:47.431Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2205.7
+  },
+  {
+    "timestamp": "2026-04-16T16:26:49.472Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2041.47
+  },
+  {
+    "timestamp": "2026-04-16T16:26:49.787Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 314.71
+  },
+  {
+    "timestamp": "2026-04-16T16:26:53.689Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5
+  },
+  {
+    "timestamp": "2026-04-16T16:26:54.506Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 816.86
+  },
+  {
+    "timestamp": "2026-04-16T16:26:54.509Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.54
+  },
+  {
+    "timestamp": "2026-04-16T16:26:55.005Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 496.69
+  },
+  {
+    "timestamp": "2026-04-16T16:26:55.158Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 152.36
+  },
+  {
+    "timestamp": "2026-04-16T16:26:57.349Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2191.47
+  },
+  {
+    "timestamp": "2026-04-16T16:26:59.461Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2112.01
+  },
+  {
+    "timestamp": "2026-04-16T16:26:59.808Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 346.53
+  },
+  {
+    "timestamp": "2026-04-16T16:27:03.693Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.98
+  },
+  {
+    "timestamp": "2026-04-16T16:27:04.502Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.08
+  },
+  {
+    "timestamp": "2026-04-16T16:27:04.504Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.76
+  },
+  {
+    "timestamp": "2026-04-16T16:27:05.295Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 791.03
+  },
+  {
+    "timestamp": "2026-04-16T16:27:05.501Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 206.08
+  },
+  {
+    "timestamp": "2026-04-16T16:27:07.791Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2289.95
+  },
+  {
+    "timestamp": "2026-04-16T16:27:09.903Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2111.39
+  },
+  {
+    "timestamp": "2026-04-16T16:27:10.314Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 410.72
+  },
+  {
+    "timestamp": "2026-04-16T16:27:13.706Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.72
+  },
+  {
+    "timestamp": "2026-04-16T16:27:14.519Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.35
+  },
+  {
+    "timestamp": "2026-04-16T16:27:14.522Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.99
+  },
+  {
+    "timestamp": "2026-04-16T16:27:15.066Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 543.44
+  },
+  {
+    "timestamp": "2026-04-16T16:27:15.221Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.64
+  },
+  {
+    "timestamp": "2026-04-16T16:27:17.688Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2467.41
+  },
+  {
+    "timestamp": "2026-04-16T16:27:20.186Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2498.27
+  },
+  {
+    "timestamp": "2026-04-16T16:27:20.550Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 363.92
+  },
+  {
+    "timestamp": "2026-04-16T16:27:23.718Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.81
+  },
+  {
+    "timestamp": "2026-04-16T16:27:24.533Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 814.79
+  },
+  {
+    "timestamp": "2026-04-16T16:27:24.536Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.9
+  },
+  {
+    "timestamp": "2026-04-16T16:27:25.264Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 728.14
+  },
+  {
+    "timestamp": "2026-04-16T16:27:25.565Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 301.42
+  },
+  {
+    "timestamp": "2026-04-16T16:27:28.258Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2692.29
+  },
+  {
+    "timestamp": "2026-04-16T16:27:30.433Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2175.44
+  },
+  {
+    "timestamp": "2026-04-16T16:27:30.742Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 308.75
+  },
+  {
+    "timestamp": "2026-04-16T16:27:33.724Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.43
+  },
+  {
+    "timestamp": "2026-04-16T16:27:34.537Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.4
+  },
+  {
+    "timestamp": "2026-04-16T16:27:34.539Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.15
+  },
+  {
+    "timestamp": "2026-04-16T16:27:35.344Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.05
+  },
+  {
+    "timestamp": "2026-04-16T16:27:35.506Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 161.95
+  },
+  {
+    "timestamp": "2026-04-16T16:27:37.738Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2231.84
+  },
+  {
+    "timestamp": "2026-04-16T16:27:39.832Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2094.12
+  },
+  {
+    "timestamp": "2026-04-16T16:27:40.199Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 366.91
+  },
+  {
+    "timestamp": "2026-04-16T16:27:43.741Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.56
+  },
+  {
+    "timestamp": "2026-04-16T16:27:44.552Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.61
+  },
+  {
+    "timestamp": "2026-04-16T16:27:44.555Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.45
+  },
+  {
+    "timestamp": "2026-04-16T16:27:45.745Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1190.76
+  },
+  {
+    "timestamp": "2026-04-16T16:27:45.938Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 192.6
+  },
+  {
+    "timestamp": "2026-04-16T16:27:48.307Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2368.32
+  },
+  {
+    "timestamp": "2026-04-16T16:27:50.567Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2260.33
+  },
+  {
+    "timestamp": "2026-04-16T16:27:50.888Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 320.68
+  },
+  {
+    "timestamp": "2026-04-16T16:27:53.755Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.95
+  },
+  {
+    "timestamp": "2026-04-16T16:27:54.574Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 818.99
+  },
+  {
+    "timestamp": "2026-04-16T16:27:54.577Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.71
+  },
+  {
+    "timestamp": "2026-04-16T16:27:55.476Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 899.37
+  },
+  {
+    "timestamp": "2026-04-16T16:27:55.664Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 188.33
+  },
+  {
+    "timestamp": "2026-04-16T16:27:57.749Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2084.72
+  },
+  {
+    "timestamp": "2026-04-16T16:28:00.998Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 3249.1
+  },
+  {
+    "timestamp": "2026-04-16T16:28:01.409Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 411.08
+  },
+  {
+    "timestamp": "2026-04-16T16:28:03.758Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.46
+  },
+  {
+    "timestamp": "2026-04-16T16:28:04.569Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.52
+  },
+  {
+    "timestamp": "2026-04-16T16:28:04.571Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.42
+  },
+  {
+    "timestamp": "2026-04-16T16:28:05.710Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1138.74
+  },
+  {
+    "timestamp": "2026-04-16T16:28:05.918Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 207.56
+  },
+  {
+    "timestamp": "2026-04-16T16:28:08.267Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2349.31
+  },
+  {
+    "timestamp": "2026-04-16T16:28:10.326Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2058.68
+  },
+  {
+    "timestamp": "2026-04-16T16:28:10.683Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 356.74
+  },
+  {
+    "timestamp": "2026-04-16T16:28:13.760Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.26
+  },
+  {
+    "timestamp": "2026-04-16T16:28:14.570Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.05
+  },
+  {
+    "timestamp": "2026-04-16T16:28:14.575Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 5.13
+  },
+  {
+    "timestamp": "2026-04-16T16:28:15.442Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 866.35
+  },
+  {
+    "timestamp": "2026-04-16T16:28:15.648Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 206.08
+  },
+  {
+    "timestamp": "2026-04-16T16:28:17.900Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2251.64
+  },
+  {
+    "timestamp": "2026-04-16T16:28:20.060Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2159.96
+  },
+  {
+    "timestamp": "2026-04-16T16:28:20.427Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 366.95
+  },
+  {
+    "timestamp": "2026-04-16T16:28:23.784Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 22.01
+  },
+  {
+    "timestamp": "2026-04-16T16:28:24.596Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.56
+  },
+  {
+    "timestamp": "2026-04-16T16:28:24.598Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.74
+  },
+  {
+    "timestamp": "2026-04-16T16:28:25.217Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 618.79
+  },
+  {
+    "timestamp": "2026-04-16T16:28:25.374Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 156.97
+  },
+  {
+    "timestamp": "2026-04-16T16:28:27.564Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2190.26
+  },
+  {
+    "timestamp": "2026-04-16T16:28:30.399Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2834.37
+  },
+  {
+    "timestamp": "2026-04-16T16:28:30.745Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 346.33
+  },
+  {
+    "timestamp": "2026-04-16T16:28:33.777Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.67
+  },
+  {
+    "timestamp": "2026-04-16T16:28:34.587Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.33
+  },
+  {
+    "timestamp": "2026-04-16T16:28:34.590Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.38
+  },
+  {
+    "timestamp": "2026-04-16T16:28:35.308Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 717.7
+  },
+  {
+    "timestamp": "2026-04-16T16:28:35.511Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 202.6
+  },
+  {
+    "timestamp": "2026-04-16T16:28:38.178Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2667.44
+  },
+  {
+    "timestamp": "2026-04-16T16:28:40.532Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2354.34
+  },
+  {
+    "timestamp": "2026-04-16T16:28:40.963Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 430.76
+  },
+  {
+    "timestamp": "2026-04-16T16:28:43.789Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.43
+  },
+  {
+    "timestamp": "2026-04-16T16:28:44.601Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.53
+  },
+  {
+    "timestamp": "2026-04-16T16:28:44.603Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.21
+  },
+  {
+    "timestamp": "2026-04-16T16:28:45.442Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 838.97
+  },
+  {
+    "timestamp": "2026-04-16T16:28:45.661Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 218.69
+  },
+  {
+    "timestamp": "2026-04-16T16:28:48.516Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2855.21
+  },
+  {
+    "timestamp": "2026-04-16T16:28:50.770Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2253.32
+  },
+  {
+    "timestamp": "2026-04-16T16:28:51.183Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 412.84
+  },
+  {
+    "timestamp": "2026-04-16T16:28:53.798Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 11.24
+  },
+  {
+    "timestamp": "2026-04-16T16:28:54.619Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 821.66
+  },
+  {
+    "timestamp": "2026-04-16T16:28:54.622Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.69
+  },
+  {
+    "timestamp": "2026-04-16T16:28:55.278Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 655.67
+  },
+  {
+    "timestamp": "2026-04-16T16:28:55.428Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 149.69
+  },
+  {
+    "timestamp": "2026-04-16T16:28:57.642Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2214.13
+  },
+  {
+    "timestamp": "2026-04-16T16:28:59.791Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2149.5
+  },
+  {
+    "timestamp": "2026-04-16T16:29:00.196Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 404.75
+  },
+  {
+    "timestamp": "2026-04-16T16:29:03.817Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 24.92
+  },
+  {
+    "timestamp": "2026-04-16T16:29:04.640Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 823.08
+  },
+  {
+    "timestamp": "2026-04-16T16:29:04.649Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 8.3
+  },
+  {
+    "timestamp": "2026-04-16T16:29:05.176Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 527.44
+  },
+  {
+    "timestamp": "2026-04-16T16:29:05.339Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 162.58
+  },
+  {
+    "timestamp": "2026-04-16T16:29:07.554Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2216.02
+  },
+  {
+    "timestamp": "2026-04-16T16:29:09.696Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2142.33
+  },
+  {
+    "timestamp": "2026-04-16T16:29:10.029Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 332.45
+  },
+  {
+    "timestamp": "2026-04-16T16:29:13.801Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.9
+  },
+  {
+    "timestamp": "2026-04-16T16:29:14.620Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.66
+  },
+  {
+    "timestamp": "2026-04-16T16:29:14.625Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.86
+  },
+  {
+    "timestamp": "2026-04-16T16:29:15.282Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 656.68
+  },
+  {
+    "timestamp": "2026-04-16T16:29:15.446Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 163.62
+  },
+  {
+    "timestamp": "2026-04-16T16:29:17.711Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2265.19
+  },
+  {
+    "timestamp": "2026-04-16T16:29:19.838Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2126.93
+  },
+  {
+    "timestamp": "2026-04-16T16:29:20.171Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 333.33
+  },
+  {
+    "timestamp": "2026-04-16T16:29:23.800Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.44
+  },
+  {
+    "timestamp": "2026-04-16T16:29:24.615Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 814.97
+  },
+  {
+    "timestamp": "2026-04-16T16:29:24.618Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.04
+  },
+  {
+    "timestamp": "2026-04-16T16:29:25.124Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 505.62
+  },
+  {
+    "timestamp": "2026-04-16T16:29:25.268Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 144.19
+  },
+  {
+    "timestamp": "2026-04-16T16:29:27.429Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2160.52
+  },
+  {
+    "timestamp": "2026-04-16T16:29:29.529Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2099.97
+  },
+  {
+    "timestamp": "2026-04-16T16:29:29.878Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 349.85
+  },
+  {
+    "timestamp": "2026-04-16T16:29:33.813Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.43
+  },
+  {
+    "timestamp": "2026-04-16T16:29:34.622Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.03
+  },
+  {
+    "timestamp": "2026-04-16T16:29:34.628Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 5.21
+  },
+  {
+    "timestamp": "2026-04-16T16:29:35.148Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 519.92
+  },
+  {
+    "timestamp": "2026-04-16T16:29:35.298Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 150.47
+  },
+  {
+    "timestamp": "2026-04-16T16:29:37.518Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2219.9
+  },
+  {
+    "timestamp": "2026-04-16T16:29:39.638Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2120.36
+  },
+  {
+    "timestamp": "2026-04-16T16:29:39.974Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 335.28
+  },
+  {
+    "timestamp": "2026-04-16T16:29:43.822Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.44
+  },
+  {
+    "timestamp": "2026-04-16T16:29:44.654Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 832.58
+  },
+  {
+    "timestamp": "2026-04-16T16:29:44.659Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.67
+  },
+  {
+    "timestamp": "2026-04-16T16:29:45.208Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 548.62
+  },
+  {
+    "timestamp": "2026-04-16T16:29:45.371Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 163.4
+  },
+  {
+    "timestamp": "2026-04-16T16:29:47.499Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2127.92
+  },
+  {
+    "timestamp": "2026-04-16T16:29:49.701Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2202.21
+  },
+  {
+    "timestamp": "2026-04-16T16:29:50.076Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 374.66
+  },
+  {
+    "timestamp": "2026-04-16T16:29:53.836Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.94
+  },
+  {
+    "timestamp": "2026-04-16T16:29:54.647Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.04
+  },
+  {
+    "timestamp": "2026-04-16T16:29:54.653Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 5.39
+  },
+  {
+    "timestamp": "2026-04-16T16:29:55.240Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 587.64
+  },
+  {
+    "timestamp": "2026-04-16T16:29:55.395Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.57
+  },
+  {
+    "timestamp": "2026-04-16T16:29:57.649Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2253.93
+  },
+  {
+    "timestamp": "2026-04-16T16:29:59.782Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2132.92
+  },
+  {
+    "timestamp": "2026-04-16T16:30:00.123Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 341.23
+  },
+  {
+    "timestamp": "2026-04-16T16:30:03.842Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.82
+  },
+  {
+    "timestamp": "2026-04-16T16:30:04.649Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 806.75
+  },
+  {
+    "timestamp": "2026-04-16T16:30:04.653Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.31
+  },
+  {
+    "timestamp": "2026-04-16T16:30:05.152Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 499.66
+  },
+  {
+    "timestamp": "2026-04-16T16:30:05.306Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.14
+  },
+  {
+    "timestamp": "2026-04-16T16:30:07.403Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2096.46
+  },
+  {
+    "timestamp": "2026-04-16T16:30:09.556Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2152.55
+  },
+  {
+    "timestamp": "2026-04-16T16:30:09.878Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 322.38
+  },
+  {
+    "timestamp": "2026-04-16T16:30:13.851Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.33
+  },
+  {
+    "timestamp": "2026-04-16T16:30:14.660Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 808.84
+  },
+  {
+    "timestamp": "2026-04-16T16:30:14.663Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.04
+  },
+  {
+    "timestamp": "2026-04-16T16:30:15.201Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 538.35
+  },
+  {
+    "timestamp": "2026-04-16T16:30:15.365Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 163.73
+  },
+  {
+    "timestamp": "2026-04-16T16:30:17.640Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2274.26
+  },
+  {
+    "timestamp": "2026-04-16T16:30:19.807Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2167.69
+  },
+  {
+    "timestamp": "2026-04-16T16:30:20.176Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 368.91
+  },
+  {
+    "timestamp": "2026-04-16T16:30:23.855Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.31
+  },
+  {
+    "timestamp": "2026-04-16T16:30:24.669Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.31
+  },
+  {
+    "timestamp": "2026-04-16T16:30:24.675Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 6.44
+  },
+  {
+    "timestamp": "2026-04-16T16:30:25.280Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 605.1
+  },
+  {
+    "timestamp": "2026-04-16T16:30:25.431Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 150.82
+  },
+  {
+    "timestamp": "2026-04-16T16:30:27.565Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2134.06
+  },
+  {
+    "timestamp": "2026-04-16T16:30:29.591Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2025.6
+  },
+  {
+    "timestamp": "2026-04-16T16:30:29.904Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 313.06
+  },
+  {
+    "timestamp": "2026-04-16T16:30:33.867Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.82
+  },
+  {
+    "timestamp": "2026-04-16T16:30:34.676Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.17
+  },
+  {
+    "timestamp": "2026-04-16T16:30:34.681Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.15
+  },
+  {
+    "timestamp": "2026-04-16T16:30:35.929Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1248.69
+  },
+  {
+    "timestamp": "2026-04-16T16:30:36.139Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 210
+  },
+  {
+    "timestamp": "2026-04-16T16:30:38.460Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2320.68
+  },
+  {
+    "timestamp": "2026-04-16T16:30:40.574Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2113.93
+  },
+  {
+    "timestamp": "2026-04-16T16:30:40.889Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 315.26
+  },
+  {
+    "timestamp": "2026-04-16T16:30:43.879Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.45
+  },
+  {
+    "timestamp": "2026-04-16T16:30:44.689Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.94
+  },
+  {
+    "timestamp": "2026-04-16T16:30:44.693Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.63
+  },
+  {
+    "timestamp": "2026-04-16T16:30:45.232Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 538.84
+  },
+  {
+    "timestamp": "2026-04-16T16:30:45.402Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 170.15
+  },
+  {
+    "timestamp": "2026-04-16T16:30:47.591Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2189.33
+  },
+  {
+    "timestamp": "2026-04-16T16:30:49.731Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2140.15
+  },
+  {
+    "timestamp": "2026-04-16T16:30:50.062Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 330.33
+  },
+  {
+    "timestamp": "2026-04-16T16:30:53.881Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.16
+  },
+  {
+    "timestamp": "2026-04-16T16:30:54.692Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.07
+  },
+  {
+    "timestamp": "2026-04-16T16:30:54.695Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.44
+  },
+  {
+    "timestamp": "2026-04-16T16:30:55.180Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 485
+  },
+  {
+    "timestamp": "2026-04-16T16:30:55.347Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 167.05
+  },
+  {
+    "timestamp": "2026-04-16T16:30:57.674Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2327.39
+  },
+  {
+    "timestamp": "2026-04-16T16:30:59.902Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2227.49
+  },
+  {
+    "timestamp": "2026-04-16T16:31:00.232Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 330.36
+  },
+  {
+    "timestamp": "2026-04-16T16:31:03.894Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.86
+  },
+  {
+    "timestamp": "2026-04-16T16:31:04.699Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 804.61
+  },
+  {
+    "timestamp": "2026-04-16T16:31:04.700Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.1
+  },
+  {
+    "timestamp": "2026-04-16T16:31:05.730Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1029.91
+  },
+  {
+    "timestamp": "2026-04-16T16:31:05.901Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 171.56
+  },
+  {
+    "timestamp": "2026-04-16T16:31:08.144Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2242.38
+  },
+  {
+    "timestamp": "2026-04-16T16:31:10.219Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2075.1
+  },
+  {
+    "timestamp": "2026-04-16T16:31:10.593Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 374.11
+  },
+  {
+    "timestamp": "2026-04-16T16:31:13.903Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.46
+  },
+  {
+    "timestamp": "2026-04-16T16:31:14.714Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.12
+  },
+  {
+    "timestamp": "2026-04-16T16:31:14.716Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.06
+  },
+  {
+    "timestamp": "2026-04-16T16:31:15.248Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 532.1
+  },
+  {
+    "timestamp": "2026-04-16T16:31:15.409Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 160.96
+  },
+  {
+    "timestamp": "2026-04-16T16:31:17.556Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2146.32
+  },
+  {
+    "timestamp": "2026-04-16T16:31:19.863Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2307.94
+  },
+  {
+    "timestamp": "2026-04-16T16:31:20.276Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 412.1
+  },
+  {
+    "timestamp": "2026-04-16T16:31:23.902Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.34
+  },
+  {
+    "timestamp": "2026-04-16T16:31:24.718Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.57
+  },
+  {
+    "timestamp": "2026-04-16T16:31:24.719Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.68
+  },
+  {
+    "timestamp": "2026-04-16T16:31:25.421Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 702
+  },
+  {
+    "timestamp": "2026-04-16T16:31:25.579Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.73
+  },
+  {
+    "timestamp": "2026-04-16T16:31:27.675Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2095.78
+  },
+  {
+    "timestamp": "2026-04-16T16:31:29.764Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2088.88
+  },
+  {
+    "timestamp": "2026-04-16T16:31:30.094Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 329.98
+  },
+  {
+    "timestamp": "2026-04-16T16:31:33.908Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.68
+  },
+  {
+    "timestamp": "2026-04-16T16:31:34.727Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 818.44
+  },
+  {
+    "timestamp": "2026-04-16T16:31:34.730Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.17
+  },
+  {
+    "timestamp": "2026-04-16T16:31:35.358Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 627.29
+  },
+  {
+    "timestamp": "2026-04-16T16:31:35.523Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 165.33
+  },
+  {
+    "timestamp": "2026-04-16T16:31:37.688Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2164.71
+  },
+  {
+    "timestamp": "2026-04-16T16:31:39.760Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2072.16
+  },
+  {
+    "timestamp": "2026-04-16T16:31:40.085Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 325.63
+  },
+  {
+    "timestamp": "2026-04-16T16:31:43.917Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.45
+  },
+  {
+    "timestamp": "2026-04-16T16:31:44.736Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.15
+  },
+  {
+    "timestamp": "2026-04-16T16:31:44.738Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.05
+  },
+  {
+    "timestamp": "2026-04-16T16:31:45.255Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 517.07
+  },
+  {
+    "timestamp": "2026-04-16T16:31:45.430Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 174.22
+  },
+  {
+    "timestamp": "2026-04-16T16:31:47.535Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2105.56
+  },
+  {
+    "timestamp": "2026-04-16T16:31:49.677Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2141.4
+  },
+  {
+    "timestamp": "2026-04-16T16:31:49.992Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 315.56
+  },
+  {
+    "timestamp": "2026-04-16T16:31:53.923Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.45
+  },
+  {
+    "timestamp": "2026-04-16T16:31:54.742Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.65
+  },
+  {
+    "timestamp": "2026-04-16T16:31:54.746Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.17
+  },
+  {
+    "timestamp": "2026-04-16T16:31:55.295Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 549.55
+  },
+  {
+    "timestamp": "2026-04-16T16:31:55.477Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 181.79
+  },
+  {
+    "timestamp": "2026-04-16T16:31:57.610Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2133.33
+  },
+  {
+    "timestamp": "2026-04-16T16:31:59.726Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2115.55
+  },
+  {
+    "timestamp": "2026-04-16T16:32:00.064Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 337.83
+  },
+  {
+    "timestamp": "2026-04-16T16:32:03.928Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.61
+  },
+  {
+    "timestamp": "2026-04-16T16:32:04.745Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 816.84
+  },
+  {
+    "timestamp": "2026-04-16T16:32:04.748Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.88
+  },
+  {
+    "timestamp": "2026-04-16T16:32:05.294Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 545.7
+  },
+  {
+    "timestamp": "2026-04-16T16:32:05.464Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 170.6
+  },
+  {
+    "timestamp": "2026-04-16T16:32:07.831Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2366.79
+  },
+  {
+    "timestamp": "2026-04-16T16:32:09.983Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2151.7
+  },
+  {
+    "timestamp": "2026-04-16T16:32:10.362Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 379.34
+  },
+  {
+    "timestamp": "2026-04-16T16:32:13.928Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.34
+  },
+  {
+    "timestamp": "2026-04-16T16:32:14.748Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.83
+  },
+  {
+    "timestamp": "2026-04-16T16:32:14.750Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.26
+  },
+  {
+    "timestamp": "2026-04-16T16:32:15.873Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1122.93
+  },
+  {
+    "timestamp": "2026-04-16T16:32:16.052Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 179.12
+  },
+  {
+    "timestamp": "2026-04-16T16:32:18.462Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2409.78
+  },
+  {
+    "timestamp": "2026-04-16T16:32:21.315Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2852.83
+  },
+  {
+    "timestamp": "2026-04-16T16:32:21.660Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 344.99
+  },
+  {
+    "timestamp": "2026-04-16T16:32:23.939Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.06
+  },
+  {
+    "timestamp": "2026-04-16T16:32:24.758Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.02
+  },
+  {
+    "timestamp": "2026-04-16T16:32:24.760Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.94
+  },
+  {
+    "timestamp": "2026-04-16T16:32:25.340Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 579.99
+  },
+  {
+    "timestamp": "2026-04-16T16:32:25.521Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 181.38
+  },
+  {
+    "timestamp": "2026-04-16T16:32:25.869Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 347.56
+  },
+  {
+    "timestamp": "2026-04-16T16:32:28.315Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2445.9
+  },
+  {
+    "timestamp": "2026-04-16T16:32:28.657Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 342.47
+  },
+  {
+    "timestamp": "2026-04-16T16:32:33.937Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.38
+  },
+  {
+    "timestamp": "2026-04-16T16:32:34.744Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 807.07
+  },
+  {
+    "timestamp": "2026-04-16T16:32:34.745Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.17
+  },
+  {
+    "timestamp": "2026-04-16T16:32:35.328Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 582.55
+  },
+  {
+    "timestamp": "2026-04-16T16:32:35.544Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 216.2
+  },
+  {
+    "timestamp": "2026-04-16T16:32:37.792Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2248.27
+  },
+  {
+    "timestamp": "2026-04-16T16:32:39.890Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2097.93
+  },
+  {
+    "timestamp": "2026-04-16T16:32:40.217Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 327.03
+  },
+  {
+    "timestamp": "2026-04-16T16:32:43.938Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.35
+  },
+  {
+    "timestamp": "2026-04-16T16:32:44.744Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.91
+  },
+  {
+    "timestamp": "2026-04-16T16:32:44.747Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.76
+  },
+  {
+    "timestamp": "2026-04-16T16:32:45.375Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 628.26
+  },
+  {
+    "timestamp": "2026-04-16T16:32:45.543Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 167.79
+  },
+  {
+    "timestamp": "2026-04-16T16:32:48.236Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2693.2
+  },
+  {
+    "timestamp": "2026-04-16T16:32:50.286Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2049.6
+  },
+  {
+    "timestamp": "2026-04-16T16:32:50.603Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 316.93
+  },
+  {
+    "timestamp": "2026-04-16T16:32:53.949Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.22
+  },
+  {
+    "timestamp": "2026-04-16T16:32:54.769Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 819.83
+  },
+  {
+    "timestamp": "2026-04-16T16:32:54.773Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.64
+  },
+  {
+    "timestamp": "2026-04-16T16:32:55.336Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 562.95
+  },
+  {
+    "timestamp": "2026-04-16T16:32:55.494Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.99
+  },
+  {
+    "timestamp": "2026-04-16T16:32:57.660Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2165.95
+  },
+  {
+    "timestamp": "2026-04-16T16:32:59.778Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2118.59
+  },
+  {
+    "timestamp": "2026-04-16T16:33:00.085Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 306.75
+  },
+  {
+    "timestamp": "2026-04-16T16:33:03.955Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.06
+  },
+  {
+    "timestamp": "2026-04-16T16:33:04.766Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.04
+  },
+  {
+    "timestamp": "2026-04-16T16:33:04.769Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.27
+  },
+  {
+    "timestamp": "2026-04-16T16:33:05.298Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 528.77
+  },
+  {
+    "timestamp": "2026-04-16T16:33:05.456Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.88
+  },
+  {
+    "timestamp": "2026-04-16T16:33:07.572Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2116.27
+  },
+  {
+    "timestamp": "2026-04-16T16:33:09.681Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2109.4
+  },
+  {
+    "timestamp": "2026-04-16T16:33:09.991Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 309.86
+  },
+  {
+    "timestamp": "2026-04-16T16:33:13.960Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.67
+  },
+  {
+    "timestamp": "2026-04-16T16:33:14.778Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 817.83
+  },
+  {
+    "timestamp": "2026-04-16T16:33:14.781Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.93
+  },
+  {
+    "timestamp": "2026-04-16T16:33:15.360Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 579.36
+  },
+  {
+    "timestamp": "2026-04-16T16:33:15.508Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 148.4
+  },
+  {
+    "timestamp": "2026-04-16T16:33:17.684Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2175.49
+  },
+  {
+    "timestamp": "2026-04-16T16:33:19.818Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2133.6
+  },
+  {
+    "timestamp": "2026-04-16T16:33:20.173Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 355.67
+  },
+  {
+    "timestamp": "2026-04-16T16:33:23.959Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.48
+  },
+  {
+    "timestamp": "2026-04-16T16:33:24.767Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 807.68
+  },
+  {
+    "timestamp": "2026-04-16T16:33:24.770Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.07
+  },
+  {
+    "timestamp": "2026-04-16T16:33:25.288Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 517.75
+  },
+  {
+    "timestamp": "2026-04-16T16:33:25.441Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 153.01
+  },
+  {
+    "timestamp": "2026-04-16T16:33:27.565Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2123.66
+  },
+  {
+    "timestamp": "2026-04-16T16:33:29.677Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2112.75
+  },
+  {
+    "timestamp": "2026-04-16T16:33:29.987Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 310.06
+  },
+  {
+    "timestamp": "2026-04-16T16:33:33.962Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.57
+  },
+  {
+    "timestamp": "2026-04-16T16:33:34.769Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 806.15
+  },
+  {
+    "timestamp": "2026-04-16T16:33:34.772Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.84
+  },
+  {
+    "timestamp": "2026-04-16T16:33:35.384Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 611.66
+  },
+  {
+    "timestamp": "2026-04-16T16:33:35.534Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 149.62
+  },
+  {
+    "timestamp": "2026-04-16T16:33:38.132Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2597.68
+  },
+  {
+    "timestamp": "2026-04-16T16:33:40.281Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2149.15
+  },
+  {
+    "timestamp": "2026-04-16T16:33:40.636Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 355.22
+  },
+  {
+    "timestamp": "2026-04-16T16:33:43.964Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.34
+  },
+  {
+    "timestamp": "2026-04-16T16:33:44.780Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.89
+  },
+  {
+    "timestamp": "2026-04-16T16:33:44.783Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.82
+  },
+  {
+    "timestamp": "2026-04-16T16:33:45.341Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 558.47
+  },
+  {
+    "timestamp": "2026-04-16T16:33:45.512Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 170.52
+  },
+  {
+    "timestamp": "2026-04-16T16:33:47.617Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2105.54
+  },
+  {
+    "timestamp": "2026-04-16T16:33:49.873Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2255.84
+  },
+  {
+    "timestamp": "2026-04-16T16:33:50.384Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 510.6
+  },
+  {
+    "timestamp": "2026-04-16T16:33:53.973Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.57
+  },
+  {
+    "timestamp": "2026-04-16T16:33:54.791Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 817.91
+  },
+  {
+    "timestamp": "2026-04-16T16:33:54.794Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.76
+  },
+  {
+    "timestamp": "2026-04-16T16:33:55.402Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 607.72
+  },
+  {
+    "timestamp": "2026-04-16T16:33:55.608Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 205.37
+  },
+  {
+    "timestamp": "2026-04-16T16:33:57.807Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2199.49
+  },
+  {
+    "timestamp": "2026-04-16T16:34:00.214Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2406.3
+  },
+  {
+    "timestamp": "2026-04-16T16:34:00.625Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 411.89
+  },
+  {
+    "timestamp": "2026-04-16T16:34:03.981Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.12
+  },
+  {
+    "timestamp": "2026-04-16T16:34:04.796Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 814.45
+  },
+  {
+    "timestamp": "2026-04-16T16:34:04.799Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.43
+  },
+  {
+    "timestamp": "2026-04-16T16:34:05.679Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 879.48
+  },
+  {
+    "timestamp": "2026-04-16T16:34:05.843Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 164.19
+  },
+  {
+    "timestamp": "2026-04-16T16:34:08.312Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2468.68
+  },
+  {
+    "timestamp": "2026-04-16T16:34:10.555Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2242.86
+  },
+  {
+    "timestamp": "2026-04-16T16:34:10.873Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 318.11
+  },
+  {
+    "timestamp": "2026-04-16T16:34:13.993Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.4
+  },
+  {
+    "timestamp": "2026-04-16T16:34:14.811Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 817.92
+  },
+  {
+    "timestamp": "2026-04-16T16:34:14.814Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.41
+  },
+  {
+    "timestamp": "2026-04-16T16:34:15.832Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1018.29
+  },
+  {
+    "timestamp": "2026-04-16T16:34:15.990Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.73
+  },
+  {
+    "timestamp": "2026-04-16T16:34:18.801Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2811.27
+  },
+  {
+    "timestamp": "2026-04-16T16:34:21.043Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2242.02
+  },
+  {
+    "timestamp": "2026-04-16T16:34:21.468Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 425.07
+  },
+  {
+    "timestamp": "2026-04-16T16:34:24.006Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.9
+  },
+  {
+    "timestamp": "2026-04-16T16:34:24.820Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.52
+  },
+  {
+    "timestamp": "2026-04-16T16:34:24.822Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.29
+  },
+  {
+    "timestamp": "2026-04-16T16:34:25.767Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 944.5
+  },
+  {
+    "timestamp": "2026-04-16T16:34:25.923Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 156.84
+  },
+  {
+    "timestamp": "2026-04-16T16:34:28.479Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2555.72
+  },
+  {
+    "timestamp": "2026-04-16T16:34:31.858Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 3379.1
+  },
+  {
+    "timestamp": "2026-04-16T16:34:32.375Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 517.04
+  },
+  {
+    "timestamp": "2026-04-16T16:34:34.013Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 10.57
+  },
+  {
+    "timestamp": "2026-04-16T16:34:34.826Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 813.48
+  },
+  {
+    "timestamp": "2026-04-16T16:34:34.830Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.37
+  },
+  {
+    "timestamp": "2026-04-16T16:34:36.161Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1331.02
+  },
+  {
+    "timestamp": "2026-04-16T16:34:36.360Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 199.18
+  },
+  {
+    "timestamp": "2026-04-16T16:34:36.768Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 408.38
+  },
+  {
+    "timestamp": "2026-04-16T16:34:39.230Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2461.36
+  },
+  {
+    "timestamp": "2026-04-16T16:34:39.641Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 410.99
+  },
+  {
+    "timestamp": "2026-04-16T16:34:44.019Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.95
+  },
+  {
+    "timestamp": "2026-04-16T16:34:44.828Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.23
+  },
+  {
+    "timestamp": "2026-04-16T16:34:44.831Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.52
+  },
+  {
+    "timestamp": "2026-04-16T16:34:45.934Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1103.73
+  },
+  {
+    "timestamp": "2026-04-16T16:34:46.108Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 173.29
+  },
+  {
+    "timestamp": "2026-04-16T16:34:48.410Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2302.46
+  },
+  {
+    "timestamp": "2026-04-16T16:34:50.616Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2206.26
+  },
+  {
+    "timestamp": "2026-04-16T16:34:50.976Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 359.69
+  },
+  {
+    "timestamp": "2026-04-16T16:34:54.024Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.91
+  },
+  {
+    "timestamp": "2026-04-16T16:34:54.837Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.55
+  },
+  {
+    "timestamp": "2026-04-16T16:34:54.840Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.81
+  },
+  {
+    "timestamp": "2026-04-16T16:34:55.820Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 979.39
+  },
+  {
+    "timestamp": "2026-04-16T16:34:56.023Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 203.25
+  },
+  {
+    "timestamp": "2026-04-16T16:34:58.320Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2296.83
+  },
+  {
+    "timestamp": "2026-04-16T16:35:00.743Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2422.58
+  },
+  {
+    "timestamp": "2026-04-16T16:35:01.066Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 323.84
+  },
+  {
+    "timestamp": "2026-04-16T16:35:04.026Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.89
+  },
+  {
+    "timestamp": "2026-04-16T16:35:04.844Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 818.15
+  },
+  {
+    "timestamp": "2026-04-16T16:35:04.845Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.25
+  },
+  {
+    "timestamp": "2026-04-16T16:35:05.468Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 622.68
+  },
+  {
+    "timestamp": "2026-04-16T16:35:05.652Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 184.22
+  },
+  {
+    "timestamp": "2026-04-16T16:35:08.542Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2889.61
+  },
+  {
+    "timestamp": "2026-04-16T16:35:10.644Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2101.43
+  },
+  {
+    "timestamp": "2026-04-16T16:35:10.966Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 321.82
+  },
+  {
+    "timestamp": "2026-04-16T16:35:14.033Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.27
+  },
+  {
+    "timestamp": "2026-04-16T16:35:14.842Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.22
+  },
+  {
+    "timestamp": "2026-04-16T16:35:14.844Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.96
+  },
+  {
+    "timestamp": "2026-04-16T16:35:15.588Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 743.94
+  },
+  {
+    "timestamp": "2026-04-16T16:35:15.745Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 156.16
+  },
+  {
+    "timestamp": "2026-04-16T16:35:18.078Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2333.58
+  },
+  {
+    "timestamp": "2026-04-16T16:35:20.786Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2707.97
+  },
+  {
+    "timestamp": "2026-04-16T16:35:21.111Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 325.13
+  },
+  {
+    "timestamp": "2026-04-16T16:35:24.048Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.52
+  },
+  {
+    "timestamp": "2026-04-16T16:35:24.865Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 816.47
+  },
+  {
+    "timestamp": "2026-04-16T16:35:24.867Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.02
+  },
+  {
+    "timestamp": "2026-04-16T16:35:26.037Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1170.29
+  },
+  {
+    "timestamp": "2026-04-16T16:35:26.221Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 184.3
+  },
+  {
+    "timestamp": "2026-04-16T16:35:28.461Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2239.52
+  },
+  {
+    "timestamp": "2026-04-16T16:35:30.618Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2156.77
+  },
+  {
+    "timestamp": "2026-04-16T16:35:31.013Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 394.87
+  },
+  {
+    "timestamp": "2026-04-16T16:35:34.051Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.42
+  },
+  {
+    "timestamp": "2026-04-16T16:35:34.868Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 816.37
+  },
+  {
+    "timestamp": "2026-04-16T16:35:34.870Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.26
+  },
+  {
+    "timestamp": "2026-04-16T16:35:35.437Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 567.59
+  },
+  {
+    "timestamp": "2026-04-16T16:35:35.598Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 160.3
+  },
+  {
+    "timestamp": "2026-04-16T16:35:37.749Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2151.18
+  },
+  {
+    "timestamp": "2026-04-16T16:35:40.164Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2414.46
+  },
+  {
+    "timestamp": "2026-04-16T16:35:40.532Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 368.26
+  },
+  {
+    "timestamp": "2026-04-16T16:35:44.051Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.98
+  },
+  {
+    "timestamp": "2026-04-16T16:35:44.866Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 814.7
+  },
+  {
+    "timestamp": "2026-04-16T16:35:44.870Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.51
+  },
+  {
+    "timestamp": "2026-04-16T16:35:45.470Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 599.18
+  },
+  {
+    "timestamp": "2026-04-16T16:35:45.651Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 180.96
+  },
+  {
+    "timestamp": "2026-04-16T16:35:47.858Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2207.02
+  },
+  {
+    "timestamp": "2026-04-16T16:35:50.055Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2197.29
+  },
+  {
+    "timestamp": "2026-04-16T16:35:50.403Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 347.86
+  },
+  {
+    "timestamp": "2026-04-16T16:35:54.062Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.33
+  },
+  {
+    "timestamp": "2026-04-16T16:35:54.866Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 803.39
+  },
+  {
+    "timestamp": "2026-04-16T16:35:54.868Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.89
+  },
+  {
+    "timestamp": "2026-04-16T16:35:55.478Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 609.82
+  },
+  {
+    "timestamp": "2026-04-16T16:35:55.640Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 162.53
+  },
+  {
+    "timestamp": "2026-04-16T16:35:58.014Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2373.86
+  },
+  {
+    "timestamp": "2026-04-16T16:36:00.345Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2330.79
+  },
+  {
+    "timestamp": "2026-04-16T16:36:00.746Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 401.47
+  },
+  {
+    "timestamp": "2026-04-16T16:36:04.068Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.95
+  },
+  {
+    "timestamp": "2026-04-16T16:36:04.874Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.93
+  },
+  {
+    "timestamp": "2026-04-16T16:36:04.877Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.15
+  },
+  {
+    "timestamp": "2026-04-16T16:36:05.381Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 504.61
+  },
+  {
+    "timestamp": "2026-04-16T16:36:05.536Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.26
+  },
+  {
+    "timestamp": "2026-04-16T16:36:07.761Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2225.64
+  },
+  {
+    "timestamp": "2026-04-16T16:36:09.965Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2203.4
+  },
+  {
+    "timestamp": "2026-04-16T16:36:10.318Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 353.04
+  },
+  {
+    "timestamp": "2026-04-16T16:36:14.081Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 6.6
+  },
+  {
+    "timestamp": "2026-04-16T16:36:14.892Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.36
+  },
+  {
+    "timestamp": "2026-04-16T16:36:14.894Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.09
+  },
+  {
+    "timestamp": "2026-04-16T16:36:15.717Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 822.62
+  },
+  {
+    "timestamp": "2026-04-16T16:36:15.879Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 161.53
+  },
+  {
+    "timestamp": "2026-04-16T16:36:18.161Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2282.56
+  },
+  {
+    "timestamp": "2026-04-16T16:36:20.501Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2340.01
+  },
+  {
+    "timestamp": "2026-04-16T16:36:20.824Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 322.45
+  },
+  {
+    "timestamp": "2026-04-16T16:36:24.082Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.34
+  },
+  {
+    "timestamp": "2026-04-16T16:36:24.892Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.72
+  },
+  {
+    "timestamp": "2026-04-16T16:36:24.895Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.94
+  },
+  {
+    "timestamp": "2026-04-16T16:36:25.456Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 561.29
+  },
+  {
+    "timestamp": "2026-04-16T16:36:25.612Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 156.24
+  },
+  {
+    "timestamp": "2026-04-16T16:36:28.181Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2568.43
+  },
+  {
+    "timestamp": "2026-04-16T16:36:30.380Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2198.69
+  },
+  {
+    "timestamp": "2026-04-16T16:36:30.912Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 532.29
+  },
+  {
+    "timestamp": "2026-04-16T16:36:34.081Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.18
+  },
+  {
+    "timestamp": "2026-04-16T16:36:34.890Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 808.14
+  },
+  {
+    "timestamp": "2026-04-16T16:36:34.894Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 4.07
+  },
+  {
+    "timestamp": "2026-04-16T16:36:35.762Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 868.17
+  },
+  {
+    "timestamp": "2026-04-16T16:36:36.062Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 299.77
+  },
+  {
+    "timestamp": "2026-04-16T16:36:38.737Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2675.48
+  },
+  {
+    "timestamp": "2026-04-16T16:36:40.797Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2059.57
+  },
+  {
+    "timestamp": "2026-04-16T16:36:41.111Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 313.92
+  },
+  {
+    "timestamp": "2026-04-16T16:36:44.088Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 2.54
+  },
+  {
+    "timestamp": "2026-04-16T16:36:44.898Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 810.13
+  },
+  {
+    "timestamp": "2026-04-16T16:36:44.900Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.34
+  },
+  {
+    "timestamp": "2026-04-16T16:36:45.999Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1099.45
+  },
+  {
+    "timestamp": "2026-04-16T16:36:46.203Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 203.84
+  },
+  {
+    "timestamp": "2026-04-16T16:36:48.366Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2162.82
+  },
+  {
+    "timestamp": "2026-04-16T16:36:50.579Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2213.55
+  },
+  {
+    "timestamp": "2026-04-16T16:36:50.914Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 334.6
+  },
+  {
+    "timestamp": "2026-04-16T16:36:54.093Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.96
+  },
+  {
+    "timestamp": "2026-04-16T16:36:54.906Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 812.82
+  },
+  {
+    "timestamp": "2026-04-16T16:36:54.907Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.32
+  },
+  {
+    "timestamp": "2026-04-16T16:36:55.412Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 504.5
+  },
+  {
+    "timestamp": "2026-04-16T16:36:55.567Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 154.84
+  },
+  {
+    "timestamp": "2026-04-16T16:36:57.890Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2323.41
+  },
+  {
+    "timestamp": "2026-04-16T16:36:59.949Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2059.19
+  },
+  {
+    "timestamp": "2026-04-16T16:37:00.333Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 383.81
+  },
+  {
+    "timestamp": "2026-04-16T16:37:04.095Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 2.51
+  },
+  {
+    "timestamp": "2026-04-16T16:37:04.902Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 806.22
+  },
+  {
+    "timestamp": "2026-04-16T16:37:04.903Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.29
+  },
+  {
+    "timestamp": "2026-04-16T16:37:05.500Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 596.78
+  },
+  {
+    "timestamp": "2026-04-16T16:37:05.673Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 172.8
+  },
+  {
+    "timestamp": "2026-04-16T16:37:07.811Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2138.64
+  },
+  {
+    "timestamp": "2026-04-16T16:37:09.913Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2101.82
+  },
+  {
+    "timestamp": "2026-04-16T16:37:10.259Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 345.84
+  },
+  {
+    "timestamp": "2026-04-16T16:37:14.106Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 5.11
+  },
+  {
+    "timestamp": "2026-04-16T16:37:14.912Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.4
+  },
+  {
+    "timestamp": "2026-04-16T16:37:14.915Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.96
+  },
+  {
+    "timestamp": "2026-04-16T16:37:15.417Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 502.65
+  },
+  {
+    "timestamp": "2026-04-16T16:37:15.563Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 145.25
+  },
+  {
+    "timestamp": "2026-04-16T16:37:17.747Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2184.46
+  },
+  {
+    "timestamp": "2026-04-16T16:37:19.993Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2246.3
+  },
+  {
+    "timestamp": "2026-04-16T16:37:20.395Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 401.46
+  },
+  {
+    "timestamp": "2026-04-16T16:37:24.111Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 2.9
+  },
+  {
+    "timestamp": "2026-04-16T16:37:24.921Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 809.97
+  },
+  {
+    "timestamp": "2026-04-16T16:37:24.923Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.85
+  },
+  {
+    "timestamp": "2026-04-16T16:37:25.451Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 528.4
+  },
+  {
+    "timestamp": "2026-04-16T16:37:25.609Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.35
+  },
+  {
+    "timestamp": "2026-04-16T16:37:28.095Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2486.18
+  },
+  {
+    "timestamp": "2026-04-16T16:37:30.199Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2104.53
+  },
+  {
+    "timestamp": "2026-04-16T16:37:30.541Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 341.64
+  },
+  {
+    "timestamp": "2026-04-16T16:37:34.120Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 8.05
+  },
+  {
+    "timestamp": "2026-04-16T16:37:34.926Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.17
+  },
+  {
+    "timestamp": "2026-04-16T16:37:34.929Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 3.29
+  },
+  {
+    "timestamp": "2026-04-16T16:37:36.386Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 1456.82
+  },
+  {
+    "timestamp": "2026-04-16T16:37:36.577Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 191.32
+  },
+  {
+    "timestamp": "2026-04-16T16:37:39.273Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2696.13
+  },
+  {
+    "timestamp": "2026-04-16T16:37:41.582Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2308.47
+  },
+  {
+    "timestamp": "2026-04-16T16:37:41.910Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 328.52
+  },
+  {
+    "timestamp": "2026-04-16T16:37:44.118Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.97
+  },
+  {
+    "timestamp": "2026-04-16T16:37:44.923Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 804.43
+  },
+  {
+    "timestamp": "2026-04-16T16:37:44.926Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.85
+  },
+  {
+    "timestamp": "2026-04-16T16:37:45.536Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 610.66
+  },
+  {
+    "timestamp": "2026-04-16T16:37:45.692Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 155.64
+  },
+  {
+    "timestamp": "2026-04-16T16:37:46.022Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 330.38
+  },
+  {
+    "timestamp": "2026-04-16T16:37:48.149Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2126.94
+  },
+  {
+    "timestamp": "2026-04-16T16:37:48.486Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 336.27
+  },
+  {
+    "timestamp": "2026-04-16T16:37:54.133Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 4.46
+  },
+  {
+    "timestamp": "2026-04-16T16:37:54.937Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 804.1
+  },
+  {
+    "timestamp": "2026-04-16T16:37:54.939Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.38
+  },
+  {
+    "timestamp": "2026-04-16T16:37:55.483Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 544.75
+  },
+  {
+    "timestamp": "2026-04-16T16:37:55.792Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 308.85
+  },
+  {
+    "timestamp": "2026-04-16T16:37:58.003Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2210.92
+  },
+  {
+    "timestamp": "2026-04-16T16:38:00.088Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2084.24
+  },
+  {
+    "timestamp": "2026-04-16T16:38:00.434Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 346.01
+  },
+  {
+    "timestamp": "2026-04-16T16:38:04.141Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 3.01
+  },
+  {
+    "timestamp": "2026-04-16T16:38:04.952Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 811.02
+  },
+  {
+    "timestamp": "2026-04-16T16:38:04.953Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 1.07
+  },
+  {
+    "timestamp": "2026-04-16T16:38:05.870Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 916.4
+  },
+  {
+    "timestamp": "2026-04-16T16:38:06.074Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 204.28
+  },
+  {
+    "timestamp": "2026-04-16T16:38:08.284Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2209.88
+  },
+  {
+    "timestamp": "2026-04-16T16:38:10.792Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2508.75
+  },
+  {
+    "timestamp": "2026-04-16T16:38:11.161Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 368.53
+  },
+  {
+    "timestamp": "2026-04-16T16:38:14.163Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.81
+  },
+  {
+    "timestamp": "2026-04-16T16:38:14.981Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 818.43
+  },
+  {
+    "timestamp": "2026-04-16T16:38:14.983Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.21
+  },
+  {
+    "timestamp": "2026-04-16T16:38:15.675Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 691.86
+  },
+  {
+    "timestamp": "2026-04-16T16:38:15.860Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 185.35
+  },
+  {
+    "timestamp": "2026-04-16T16:38:18.126Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2265.06
+  },
+  {
+    "timestamp": "2026-04-16T16:38:20.413Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2287.37
+  },
+  {
+    "timestamp": "2026-04-16T16:38:20.739Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 326.04
+  },
+  {
+    "timestamp": "2026-04-16T16:38:24.177Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.26
+  },
+  {
+    "timestamp": "2026-04-16T16:38:24.982Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 805.44
+  },
+  {
+    "timestamp": "2026-04-16T16:38:24.984Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.07
+  },
+  {
+    "timestamp": "2026-04-16T16:38:25.800Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 815.41
+  },
+  {
+    "timestamp": "2026-04-16T16:38:25.958Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 157.64
+  },
+  {
+    "timestamp": "2026-04-16T16:38:28.163Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2205.61
+  },
+  {
+    "timestamp": "2026-04-16T16:38:30.343Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2179.42
+  },
+  {
+    "timestamp": "2026-04-16T16:38:30.753Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 409.79
+  },
+  {
+    "timestamp": "2026-04-16T16:38:34.190Z",
+    "url": "http://localhost:3000/api/dummy/success",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 7.13
+  },
+  {
+    "timestamp": "2026-04-16T16:38:35.011Z",
+    "url": "http://localhost:3000/api/dummy/slow",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 821.06
+  },
+  {
+    "timestamp": "2026-04-16T16:38:35.014Z",
+    "url": "http://localhost:3000/api/dummy/error",
+    "method": "GET",
+    "status": 500,
+    "success": false,
+    "duration": 2.5
+  },
+  {
+    "timestamp": "2026-04-16T16:38:35.977Z",
+    "url": "https://google.com",
+    "method": "GET",
+    "status": 200,
+    "success": true,
+    "duration": 963.1
+  },
+  {
+    "timestamp": "2026-04-16T16:38:36.183Z",
+    "url": "https://google.com",
+    "method": "POST",
+    "status": 405,
+    "success": false,
+    "duration": 205.58
+  },
+  {
+    "timestamp": "2026-04-16T16:38:38.603Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "GET",
+    "status": 503,
+    "success": false,
+    "duration": 2420.31
+  },
+  {
+    "timestamp": "2026-04-16T16:38:40.890Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "POST",
+    "status": 503,
+    "success": false,
+    "duration": 2286.81
+  },
+  {
+    "timestamp": "2026-04-16T16:38:41.301Z",
+    "url": "https://cat-fact.herokuapp.com/facts",
+    "method": "PUT",
+    "status": 503,
+    "success": false,
+    "duration": 410.69
   }
 ]
